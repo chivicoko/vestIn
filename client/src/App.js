@@ -34,7 +34,7 @@ function App() {
     <Suspense fallback={null}>
       <Router>
         <div className="container">
-          <Header />
+          {/* <Header /> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<About />} />
@@ -103,7 +103,7 @@ function App() {
         </div>
       </Router>
       <ToastContainer />
-      <Footer />
+      {/* <Footer /> */}
     </Suspense>
   );
 }
