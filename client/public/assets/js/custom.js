@@ -146,3 +146,22 @@
 
 
 }(jQuery));
+
+// vc
+
+// animations
+setInterval(() => {
+    document.querySelector('.header-top-social').classList.toggle('spi');
+}, 10000);
+
+setInterval(() => {
+    document.querySelector('.trans1').classList.toggle('translation1');
+}, 3000);
+
+setInterval(() => {
+    document.querySelector('.trans2').classList.toggle('translation2');
+}, 3000);
+
+// cart
+let text = document.getElementById('cartNnum').innerText;
+console.log(text);

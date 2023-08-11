@@ -33,8 +33,8 @@ function App() {
   return (
     <Suspense fallback={null}>
       <Router>
-        <div className="container">
-          {/* <Header /> */}
+        <div>
+          <Header />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<About />} />
@@ -103,7 +103,7 @@ function App() {
         </div>
       </Router>
       <ToastContainer />
-      {/* <Footer /> */}
+      <Footer />
     </Suspense>
   );
 }

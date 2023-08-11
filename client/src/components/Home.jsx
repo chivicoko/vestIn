@@ -15,31 +15,7 @@ import { useTranslation } from 'react-i18next';
 import i18next from 'i18next'
 
 const Home = () => {
-    const { t } = useTranslation(["common"]);
-
-    useEffect(() => {
-      if (localStorage.getItem("i18nextLng")?.length > 2) {
-        i18next.changeLanguage('en');
-      }
-    }, [])
     
-    const [windowDimension, setWindowDimension] = useState(null);
-
-    useEffect(() => {
-        setWindowDimension(window.innerWidth);
-    }, []);
-
-    useEffect(() => {
-        function handleResize() {
-        setWindowDimension(window.innerWidth);
-        }
-
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
-    const isMobile = windowDimension <= 640;
-
     // // date - days of the week ------------
     // const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
@@ -59,7 +35,7 @@ const Home = () => {
         <>
         
 
-    {/* <section className="hero-area">
+    <section className="hero-area">
         <div className="container">
             <div className="caption-content text-center">
                 <h4>Start learning from home</h4>
@@ -72,297 +48,587 @@ const Home = () => {
             </div>
         </div>
     </section>
+
+
+    {/* ecommerce */}
     
-    <section className="category-area">
-        <div className="container">
-            <div className="row">
+    <section class="course-archive mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-5">
+                    <div class="course-sidebar">
+                        <div class="course-sidebar-search">
+                            <input type="text" value="" name="s" placeholder="Search..." class="form-control" />
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
 
-                <div className="col-lg-6 offset-lg-3">
-                    <div className="sec-heading text-center">
-                        <h4>categories</h4>
-                        <h2>Popular Categories</h2>
-                    </div>
-                </div>
+                        <div class="filter-category">
+                            <h4>Category</h4>
+                            <form action="#" method="post">
+                                <div class="form-check">
+                                    <label class="form-check-label" for="check1">
+                                        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" />Business
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="check2">
+                                        <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something" />Design
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="check3">
+                                        <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" />Development
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="check4">
+                                        <input type="checkbox" class="form-check-input" id="check4" name="option3" value="something" />Graphic Design
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="check5">
+                                        <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" />Heath & Fitness
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="check6">
+                                        <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something" />Marketing
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="check7">
+                                        <input type="checkbox" class="form-check-input" id="check7" name="option7" value="something" />Math
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="check8">
+                                        <input type="checkbox" class="form-check-input" id="check8" name="option8" value="something" />Photography
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="check9">
+                                        <input type="checkbox" class="form-check-input" id="check9" name="option9" value="something" />PHP
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="check10">
+                                        <input type="checkbox" class="form-check-input" id="check10" name="option10" value="something" />WordPress
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="filter-tag">
+                            <h4>Tag</h4>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="" />App Development
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="" />Graphic Design
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="" />Heath & Fitness
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="" />PHP
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="" />UX Design
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-level">
+                            <h4>Level</h4>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="" />Beginner
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="" />Intermediate
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="" />Expert
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-price">
+                            <h4>Price</h4>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="" />Free
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="" />Paid
+                                </label>
+                            </div>
+                        </div>
 
-            </div>
-            <div className="row">
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-7">
+                    <div class="row search-result">
+                        <div class="col-lg-6 col-md-3">
+                            <div class="tutor-courses">
+                                <h5><span>9</span> Courses</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-9">
+                            <div class="tutor-course-archive float-right">
+                                <form class="tutor-course-form">
+                                    <select class="form-control">
+                                        <option value="newest_first">Release Date (newest first)</option>
+                                        <option value="oldest_first">Release Date (oldest first)</option>
+                                        <option value="course_title_az">Course Title (a-z)</option>
+                                        <option value="course_title_za">Course Title (z-a)</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
 
-                <div className="col-md-3">
-                    <div className="category-single text-center">
-                        <a href="#"><img src="assets/images/cat-1.jpg" className="img-fluid" alt="image" /></a>
-                        <h4><a href="#">Development</a></h4>
-                        <p>6 Courses</p>
-                    </div>
-                </div>
-                
-                <div className="col-md-3">
-                    <div className="category-single text-center">
-                        <div className="course-category-img">
-                            <a href="#"><img src="assets/images/cat-3.jpg" className="img-fluid" alt="image" /></a>
+                        <div class="col-lg-4">
+                            <div class="course-card four">
+                                <div class="course-header">
+                                    <h5>All Levels</h5>
+                                    <div class="course-card-icon">
+                                        <img src="assets/images/icons/ribbon-1.svg" alt="image" />
+                                    </div>
+                                    <div class="course-thumbnail">
+                                        <a href="course-single.html"><img src="assets/images/course-3.jpg" class="img-fluid" alt="image" /></a>
+                                    </div>
+                                </div>
+                                <div class="course-content four">
+                                    <div class="course-rating">
+                                        <div class="star-rating-group">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <span class="course-rating-count">5.00 (2)</span>
+                                    </div>
+                                    <div class="course-title">
+                                        <h3><a href="course-single.html">Nutrition: Build Your Perfect Diet & Meal Plan</a></h3>
+                                    </div>
+                                    <ul class="course-meta">
+                                        <li><i class="fa fa-clock-o"></i> 02h 20m</li>
+                                        <li><i class="fa fa-user"></i> 58</li>
+                                    </ul>
+                                    <div class="course-author">
+                                        <div class="avator">A</div> By <span class="author-name">Admin</span>
+                                    </div>
+                                    <div class="course-content-footer">
+                                        <div class="course-price four">
+                                            <span>$15.00</span>
+                                        </div>
+                                        <div class="course-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span><a href="#">Add to cart</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="category-cont text-center">
-                            <h4><a href="#">Business</a></h4>
-                            <p>8 Courses</p>
+                        
+                        <div class="col-lg-4">
+                            <div class="course-card four">
+                                <div class="course-header">
+                                    <h5>Intermediate</h5>
+                                    <div class="course-card-icon">
+                                        <img src="assets/images/icons/ribbon-1.svg" alt="image" />
+                                    </div>
+                                    <div class="course-thumbnail">
+                                        <a href="course-single.html"><img src="assets/images/course-1.jpg" class="img-fluid" alt="image" /></a>
+                                    </div>
+                                </div>
+                                <div class="course-content four">
+                                    <div class="course-rating">
+                                        <div class="star-rating-group">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <span class="course-rating-count">5.00 (8)</span>
+                                    </div>
+                                    <div class="course-title">
+                                        <h3><a href="course-single.html">PHP Beginners – Become a PHP Master</a></h3>
+                                    </div>
+                                    <ul class="course-meta">
+                                        <li><i class="fa fa-clock-o"></i> 3h 32m</li>
+                                        <li><i class="fa fa-user"></i> 66</li>
+                                    </ul>
+                                    <div class="course-author">
+                                        <div class="avator">A</div> By <span class="author-name">Admin</span>
+                                    </div>
+                                    <div class="course-content-footer">
+                                        <div class="course-price four">
+                                            <span>Free</span>
+                                        </div>
+                                        <div class="course-cart">
+                                            <span><a href="#">Get Enrolled</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                
-                <div className="col-md-3">
-                    <div className="category-single text-center">
-                        <div className="course-category-img">
-                            <a href="#"><img src="assets/images/cat-5.jpg" className="img-fluid" alt="image" /></a>
+                        
+                        <div class="col-lg-4">
+                            <div class="course-card four">
+                                <div class="course-header">
+                                    <h5>Beginner</h5>
+                                    <div class="course-card-icon">
+                                        <img src="assets/images/icons/ribbon-1.svg" alt="image" />
+                                    </div>
+                                    <div class="course-thumbnail">
+                                        <a href="course-single.html"><img src="assets/images/course-11.jpg" class="img-fluid" alt="image" /></a>
+                                    </div>
+                                </div>
+                                <div class="course-content four">
+                                    <div class="course-rating">
+                                        <div class="star-rating-group">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-o"></i>
+                                        </div>
+                                        <span class="course-rating-count">4.50 (9)</span>
+                                    </div>
+                                    <div class="course-title">
+                                        <h3><a href="course-single.html">WordPress Master Class for Beginners</a></h3>
+                                    </div>
+                                    <ul class="course-meta">
+                                        <li><i class="fa fa-clock-o"></i>07h 30m</li>
+                                        <li><i class="fa fa-user"></i> 33</li>
+                                    </ul>
+                                    <div class="course-author">
+                                        <div class="avator">A</div> By <span class="author-name">Admin</span>
+                                    </div>
+                                    <div class="course-content-footer">
+                                        <div class="course-price four">
+                                            <span>$29.00</span>
+                                        </div>
+                                        <div class="course-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span><a href="#">Add to cart</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="category-cont text-center">
-                            <h4><a href="#">Heath & Fitness</a></h4>
-                            <p>6 Courses</p>
+                        
+                        <div class="col-lg-4">
+                            <div class="course-card four">
+                                <div class="course-header">
+                                    <h5>Intermediate</h5>
+                                    <div class="course-card-icon">
+                                        <img src="assets/images/icons/ribbon-1.svg" alt="image" />
+                                    </div>
+                                    <div class="course-thumbnail">
+                                        <a href="course-single.html"><img src="assets/images/course-4.jpg" class="img-fluid" alt="image" /></a>
+                                    </div>
+                                </div>
+                                <div class="course-content four">
+                                    <div class="course-rating">
+                                        <div class="star-rating-group">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-o"></i>
+                                        </div>
+                                        <span class="course-rating-count">4.50 (5)</span>
+                                    </div>
+                                    <div class="course-title">
+                                        <h3><a href="course-single.html">The Complete JavaScript Course 2022</a></h3>
+                                    </div>
+                                    <ul class="course-meta">
+                                        <li><i class="fa fa-clock-o"></i> 09h 59m</li>
+                                        <li><i class="fa fa-user"></i> 14</li>
+                                    </ul>
+                                    <div class="course-author">
+                                        <div class="avator">A</div> By <span class="author-name">Admin</span>
+                                    </div>
+                                    <div class="course-content-footer">
+                                        <div class="course-price four">
+                                            <span>$17.00</span>
+                                        </div>
+                                        <div class="course-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span><a href="#">Add to cart</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                
-                <div className="col-md-3">
-                    <div className="category-single text-center">
-                        <div className="course-category-img">
-                            <a href="#"><img src="assets/images/cat-4.jpg" className="img-fluid" alt="image" /></a>
+                        
+                        <div class="col-lg-4">
+                            <div class="course-card four">
+                                <div class="course-header">
+                                    <h5>Beginner</h5>
+                                    <div class="course-card-icon">
+                                        <img src="assets/images/icons/ribbon-1.svg" alt="image" />
+                                    </div>
+                                    <div class="course-thumbnail">
+                                        <a href="course-single.html"><img src="assets/images/course-9.jpg" class="img-fluid" alt="image" /></a>
+                                    </div>
+                                </div>
+                                <div class="course-content four">
+                                    <div class="course-rating">
+                                        <div class="star-rating-group">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <span class="course-rating-count">5.00 (2)</span>
+                                    </div>
+                                    <div class="course-title">
+                                        <h3><a href="course-single.html">User Experience Design Essentials</a></h3>
+                                    </div>
+                                    <ul class="course-meta">
+                                        <li><i class="fa fa-clock-o"></i> 02h 20m</li>
+                                        <li><i class="fa fa-user"></i> 45</li>
+                                    </ul>
+                                    <div class="course-author">
+                                        <div class="avator">A</div> By <span class="author-name">Admin</span>
+                                    </div>
+                                    <div class="course-content-footer">
+                                        <div class="course-price four">
+                                            <span>$22.00</span>
+                                        </div>
+                                        <div class="course-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span><a href="#">Add to cart</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="category-cont text-center">
-                            <h4><a href="#">Web Design</a></h4>
-                            <p>7 Courses</p>
+                        
+                        <div class="col-lg-4">
+                            <div class="course-card four">
+                                <div class="course-header">
+                                    <h5>All Levels</h5>
+                                    <div class="course-card-icon">
+                                        <img src="assets/images/icons/ribbon-1.svg" alt="image" />
+                                    </div>
+                                    <div class="course-thumbnail">
+                                        <a href="course-single.html"><img src="assets/images/course-5.jpg" class="img-fluid" alt="image" /></a>
+                                    </div>
+                                </div>
+                                <div class="course-content four">
+                                    <div class="course-rating">
+                                        <div class="star-rating-group">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-o"></i>
+                                        </div>
+                                        <span class="course-rating-count">4.50 (8)</span>
+                                    </div>
+                                    <div class="course-title">
+                                        <h3><a href="course-single.html">Ultimate Photoshop Training: From Beginner</a></h3>
+                                    </div>
+                                    <ul class="course-meta">
+                                        <li><i class="fa fa-clock-o"></i> 04h 39m</li>
+                                        <li><i class="fa fa-user"></i> 26</li>
+                                    </ul>
+                                    <div class="course-author">
+                                        <div class="avator">A</div> By <span class="author-name">Admin</span>
+                                    </div>
+                                    <div class="course-content-footer">
+                                        <div class="course-price four">
+                                            <span>$25.00</span>
+                                        </div>
+                                        <div class="course-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span><a href="#">Add to cart</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-            </div>
-            <div className="row">
-                <div className="col-lg-12 btn-default text-center">
-                    <a href="#">all categories</a>
+                        <div class="col-lg-4">
+                            <div class="course-card four">
+                                <div class="course-header">
+                                    <h5>All Levels</h5>
+                                    <div class="course-card-icon">
+                                        <img src="assets/images/icons/ribbon-1.svg" alt="image" />
+                                    </div>
+                                    <div class="course-thumbnail">
+                                        <a href="course-single.html"><img src="assets/images/course-10.jpg" class="img-fluid" alt="image" /></a>
+                                    </div>
+                                </div>
+                                <div class="course-content four">
+                                    <div class="course-rating">
+                                        <div class="star-rating-group">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <span class="course-rating-count">4.50 (7)</span>
+                                    </div>
+                                    <div class="course-title">
+                                        <h3><a href="course-single.html">Blender Creator : Learn 3D Modelling</a></h3>
+                                    </div>
+                                    <ul class="course-meta">
+                                        <li><i class="fa fa-clock-o"></i> 07h 12m</li>
+                                        <li><i class="fa fa-user"></i> 10</li>
+                                    </ul>
+                                    <div class="course-author">
+                                        <div class="avator">A</div> By <span class="author-name">Admin</span>
+                                    </div>
+                                    <div class="course-content-footer">
+                                        <div class="course-price four">
+                                            <span>$19.00</span>
+                                        </div>
+                                        <div class="course-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span><a href="#">Add to cart</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4">
+                            <div class="course-card four">
+                                <div class="course-header">
+                                    <h5>Intermediate</h5>
+                                    <div class="course-card-icon">
+                                        <img src="assets/images/icons/ribbon-1.svg" alt="image" />
+                                    </div>
+                                    <div class="course-thumbnail">
+                                        <a href="course-single.html"><img src="assets/images/course-11.jpg" class="img-fluid" alt="image" /></a>
+                                    </div>
+                                </div>
+                                <div class="course-content four">
+                                    <div class="course-rating">
+                                        <div class="star-rating-group">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-o"></i>
+                                        </div>
+                                        <span class="course-rating-count">4.50 (5)</span>
+                                    </div>
+                                    <div class="course-title">
+                                        <h3><a href="course-single.html">Sales Training: Practical Sales Techniques</a></h3>
+                                    </div>
+                                    <ul class="course-meta">
+                                        <li><i class="fa fa-clock-o"></i> 03h 29m</li>
+                                        <li><i class="fa fa-user"></i> 29</li>
+                                    </ul>
+                                    <div class="course-author">
+                                        <div class="avator">A</div> By <span class="author-name">Admin</span>
+                                    </div>
+                                    <div class="course-content-footer">
+                                        <div class="course-price four">
+                                            <span>Free</span>
+                                        </div>
+                                        <div class="course-cart">
+                                            <span><a href="#">Get Enrolled</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4">
+                            <div class="course-card four">
+                                <div class="course-header">
+                                    <h5>Beginner</h5>
+                                    <div class="course-card-icon">
+                                        <img src="assets/images/icons/ribbon-1.svg" alt="image" />
+                                    </div>
+                                    <div class="course-thumbnail">
+                                        <a href="course-single.html"><img src="assets/images/course-8.jpg" class="img-fluid" alt="image" /></a>
+                                    </div>
+                                </div>
+                                <div class="course-content four">
+                                    <div class="course-rating">
+                                        <div class="star-rating-group">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <span class="course-rating-count">5.00 (8)</span>
+                                    </div>
+                                    <div class="course-title">
+                                        <h3><a href="course-single.html">Complete Trello – Beginners to Advanced</a></h3>
+                                    </div>
+                                    <ul class="course-meta">
+                                        <li><i class="fa fa-clock-o"></i> 04h 16m</li>
+                                        <li><i class="fa fa-user"></i> 12</li>
+                                    </ul>
+                                    <div class="course-author">
+                                        <div class="avator">A</div> By <span class="author-name">Admin</span>
+                                    </div>
+                                    <div class="course-content-footer">
+                                        <div class="course-price four">
+                                            <span>$26.00</span>
+                                        </div>
+                                        <div class="course-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span><a href="#">Add to cart</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <ul class="course-pagination text-center">
+                                <li><span>1</span></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <section className="course-area bg-gray">
-        <div className="container">
-            <div className="row">
+    {/* end ecommerce */}
 
-                <div className="col-lg-8 offset-lg-2">
-                    <div className="sec-heading text-center">
-                        <h4>courses</h4>
-                        <h2>Explore Popular Courses</h2>
-                    </div>
-                </div>
-
-            </div>
-            <div className="row">
-
-                <div className="col-lg-4 col-md-6">
-                    <div className="course-card">
-                        <div className="course-thumbnail">
-                            <a href="#">
-                                <img src="assets/images/course-3.jpg" className="img-fluid" alt="image" />
-                            </a>
-                        </div>
-                        <div className="course-content">
-                            <span className="course-price">$15.00</span>
-                            <h3 className="course-title">
-                                <a href="#">Nutrition: Build Your Perfect Diet & Meal Plan</a>
-                            </h3>
-                            <div className="course-rating">
-                                <span className="star-rating-group">
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                </span>
-                                <span className="course-rating-count">(1 Review)</span>
-                            </div>
-                            <div className="course-content-footer">
-                                <ul>
-                                    <li className="course-duration"><i className="fa fa-clock-o"></i> 04h </li>
-                                    <li className="course-user"><i className="fa fa-user-o"></i> 5</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="col-lg-4 col-md-6">
-                    <div className="course-card">
-                        <div className="course-thumbnail">
-                            <a href="#">
-                                <img src="assets/images/course-11.jpg" className="img-fluid" alt="image" />
-                            </a>
-                        </div>
-                        <div className="course-content">
-                            <span className="course-price">$29.00</span>
-                            <h3 className="course-title">
-                                <a href="#">WordPress Master className for Beginners</a>
-                            </h3>
-                            <div className="course-rating">
-                                <span className="star-rating-group">
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star-half-o"></i>
-                                </span>
-                                <span className="course-rating-count">(2 Review)</span>
-                            </div>
-                            <div className="course-content-footer">
-                                <ul>
-                                    <li className="course-duration"><i className="fa fa-clock-o"></i> 07h 30m </li>
-                                    <li className="course-user"><i className="fa fa-user-o"></i> 3</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="col-lg-4 col-md-6">
-                    <div className="course-card">
-                        <div className="course-thumbnail">
-                            <a href="#">
-                                <img src="assets/images/course-4.jpg" className="img-fluid" alt="image" />
-                            </a>
-                        </div>
-                        <div className="course-content">
-                            <span className="course-price">Free</span>
-                            <h3 className="course-title">
-                                <a href="#">The Complete JavaScript Course 2022</a>
-                            </h3>
-                            <div className="course-rating">
-                                <span className="star-rating-group">
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                </span>
-                                <span className="course-rating-count">(7 Review)</span>
-                            </div>
-                            <div className="course-content-footer">
-                                <ul>
-                                    <li className="course-duration"><i className="fa fa-clock-o"></i> 13h 20m 20s </li>
-                                    <li className="course-user"><i className="fa fa-user-o"></i> 9</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="col-lg-4 col-md-6">
-                    <div className="course-card">
-                        <div className="course-thumbnail">
-                            <a href="#">
-                                <img src="assets/images/course-9.jpg" className="img-fluid" alt="image" />
-                            </a>
-                        </div>
-                        <div className="course-content">
-                            <span className="course-price">$19.00</span>
-                            <h3 className="course-title">
-                                <a href="#">Ultimate Photoshop Training: From Beginner</a>
-                            </h3>
-                            <div className="course-rating">
-                                <span className="star-rating-group">
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star-o"></i>
-                                </span>
-                                <span className="course-rating-count">(1 Review)</span>
-                            </div>
-                            <div className="course-content-footer">
-                                <ul>
-                                    <li className="course-duration"><i className="fa fa-clock-o"></i> 13h 20m 20s </li>
-                                    <li className="course-user"><i className="fa fa-user-o"></i> 3</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="col-lg-4 col-md-6">
-                    <div className="course-card">
-                        <div className="course-thumbnail">
-                            <a href="#">
-                                <img src="assets/images/course-5.jpg" className="img-fluid" alt="image" />
-                            </a>
-                        </div>
-                        <div className="course-content">
-                            <span className="course-price">$12.00</span>
-                            <h3 className="course-title">
-                                <a href="#">User Experience Design Essentials</a>
-                            </h3>
-                            <div className="course-rating">
-                                <span className="star-rating-group">
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                </span>
-                                <span className="course-rating-count">(1 Review)</span>
-                            </div>
-                            <div className="course-content-footer">
-                                <ul>
-                                    <li className="course-duration"><i className="fa fa-clock-o"></i> 15h 20m </li>
-                                    <li className="course-user"><i className="fa fa-user-o"></i> 5</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="col-lg-4 col-md-6">
-                    <div className="course-card">
-                        <div className="course-thumbnail">
-                            <a href="#">
-                                <img src="assets/images/course-10.jpg" className="img-fluid" alt="image" />
-                            </a>
-                        </div>
-                        <div className="course-content">
-                            <span className="course-price">$17.00</span>
-                            <h3 className="course-title">
-                                <a href="#">Complete Blender Creator: Learn 3D Modelling</a>
-                            </h3>
-                            <div className="course-rating">
-                                <span className="star-rating-group">
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                </span>
-                                <span className="course-rating-count">(3 Review)</span>
-                            </div>
-                            <div className="course-content-footer">
-                                <ul>
-                                    <li className="course-duration"><i className="fa fa-clock-o"></i> 15h 20m </li>
-                                    <li className="course-user"><i className="fa fa-user-o"></i> 5</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div className="row">
-                <div className="col-lg-12">
-                    <div className="category-btn btn-default text-center">
-                        <a href="#">all courses</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section className="discount-area overlay">
-        <div className="container">
+    <section className="discount-area overlay mt-5">
+        <div className="container mt-5">
             <div className="discount-wrap">
 
                 <div className="discount-img">
-                    <img src="assets/images/img-1.jpg" className="img-fluid" alt="image" />
+                    <img src="assets/images/img-1.jpg" className="img-fluid" alt="1" />
                 </div>
                 
                 <div className="discount-cont">
@@ -378,107 +644,8 @@ const Home = () => {
             </div>
         </div>
     </section>
-    
-    <section className="testimonial-area">
-        <div className="container">
-            <div className="row">
-
-                <div className="col-lg-8 offset-lg-2">
-                    <div className="sec-heading text-center">
-                        <h4>testimonial</h4>
-                        <h2>What Says Our Students</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div className="row">
-
-                <div className="col-md-4">
-                    <div className="testi-single">
-                        <div className="testi-cont-inner">
-                            <div className="testi-quote">
-                                <i className="fa fa-quote-right"></i>
-                            </div>
-                            <div className="testi-rating">
-                                <i className="fa fa-star"></i>
-                                <i className="fa fa-star"></i>
-                                <i className="fa fa-star"></i>
-                                <i className="fa fa-star"></i>
-                                <i className="fa fa-star"></i>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis.</p>
-                        </div>
-                        <div className="testi-client-info">
-                            <div className="testi-client-img">
-                                <img src="assets/images/client-1.jpg" className="img-fluid" alt="image" />
-                            </div>
-                            <div className="testi-client-details">
-                                <h4>Adam Smith</h4>
-                                <h6>Graphics Designer</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="col-md-4">
-                    <div className="testi-single mt-0">
-                        <div className="testi-cont-inner">
-                            <div className="testi-quote">
-                                <i className="fa fa-quote-right"></i>
-                            </div>
-                            <div className="testi-rating">
-                                <i className="fa fa-star"></i>
-                                <i className="fa fa-star"></i>
-                                <i className="fa fa-star"></i>
-                                <i className="fa fa-star"></i>
-                                <i className="fa fa-star"></i>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis.</p>
-                        </div>
-                        <div className="testi-client-info">
-                            <div className="testi-client-img">
-                                <img src="assets/images/client-2.jpg" className="img-fluid" alt="image" />
-                            </div>
-                            <div className="testi-client-details">
-                                <h4>Jack Morkel</h4>
-                                <h6>Web Developer</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="col-md-4">
-                    <div className="testi-single">
-                        <div className="testi-cont-inner">
-                            <div className="testi-quote">
-                                <i className="fa fa-quote-right"></i>
-                            </div>
-                            <div className="testi-rating">
-                                <i className="fa fa-star"></i>
-                                <i className="fa fa-star"></i>
-                                <i className="fa fa-star"></i>
-                                <i className="fa fa-star"></i>
-                                <i className="fa fa-star"></i>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis.</p>
-                        </div>
-                        <div className="testi-client-info">
-                            <div className="testi-client-img">
-                                <img src="assets/images/client-3.jpg" className="img-fluid" alt="image" />
-                            </div>
-                            <div className="testi-client-details">
-                                <h4>John Doe</h4>
-                                <h6>Affiliate Marketer</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    
-    <section className="newsletter-area">
+        
+    <section className="newsletter-area pt-5">
         <div className="container">
             <div className="row newsletter-wrap overlay">
                 <div className="col-lg-6">
@@ -517,7 +684,7 @@ const Home = () => {
                         <div className="col-md-6">
                             <div className="why-choose-single">
                                 <div className="why-choose-icon">
-                                    <img src="assets/images/icons/ribbon.svg" className="img-fluid" alt="image" />
+                                    <img src="assets/images/icons/ribbon.svg" className="img-fluid" alt="ribbone-svg" />
                                 </div>
                                 <div className="why-choose-cont">
                                     <h3>High Quality Courses</h3>
@@ -529,7 +696,7 @@ const Home = () => {
                         <div className="col-md-6">
                             <div className="why-choose-single">
                                 <div className="why-choose-icon">
-                                    <img src="assets/images/icons/teacher.svg" className="img-fluid" alt="image" />
+                                    <img src="assets/images/icons/teacher.svg" className="img-fluid" alt="teacher-svg" />
                                 </div>
                                 <div className="why-choose-cont">
                                     <h3>Expert Instructors</h3>
@@ -541,7 +708,7 @@ const Home = () => {
                         <div className="col-md-6">
                             <div className="why-choose-single">
                                 <div className="why-choose-icon">
-                                    <img src="assets/images/icons/folder.svg" className="img-fluid" alt="image" />
+                                    <img src="assets/images/icons/folder.svg" className="img-fluid" alt="folder-svg" />
                                 </div>
                                 <div className="why-choose-cont">
                                     <h3>Life Time Access</h3>
@@ -553,7 +720,7 @@ const Home = () => {
                         <div className="col-md-6">
                             <div className="why-choose-single">
                                 <div className="why-choose-icon">
-                                    <img src="assets/images/icons/24-hours.svg" className="img-fluid" alt="image" />
+                                    <img src="assets/images/icons/24-hours.svg" className="img-fluid" alt="24-hours-svg" />
                                 </div>
                                 <div className="why-choose-cont">
                                     <h3>Dedicated Support</h3>
@@ -568,194 +735,17 @@ const Home = () => {
             </div>
         </div>
     </section>
-    
-    <section className="team-area bg-gray">
-        <div className="container">
-            <div className="row">
 
-                <div className="col-lg-8 offset-lg-2">
-                    <div className="sec-heading text-center">
-                        <h4>Instructors</h4>
-                        <h2>Our Expert Instructors </h2>
-                    </div>
-                </div>
-
-            </div>
-            <div className="row">
-
-                <div className="col-md-3">
-                    <div className="instructor-single shadow-none">
-                        <div className="instructor-image">
-                            <img src="assets/images/instructor-1.jpg" className="img-fluid" alt="image" />
-                            <div className="instructor-links">
-                                <ul>
-                                    <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-pinterest"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="instructor-body">
-                            <h4>Shane Warne</h4>
-                            <p>Instructor</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="col-md-3">
-                    <div className="instructor-single shadow-none">
-                        <div className="instructor-image">
-                            <img src="assets/images/instructor-2.jpg" className="img-fluid" alt="image" />
-                            <div className="instructor-links">
-                                <ul>
-                                    <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-pinterest"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="instructor-body">
-                            <h4>Avelina Smith</h4>
-                            <p>Instructor</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="col-md-3">
-                    <div className="instructor-single shadow-none">
-                        <div className="instructor-image">
-                            <img src="assets/images/instructor-3.jpg" className="img-fluid" alt="image" />
-                            <div className="instructor-links">
-                                <ul>
-                                    <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-pinterest"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="instructor-body">
-                            <h4>John Bond</h4>
-                            <p>Instructor</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="col-md-3">
-                    <div className="instructor-single shadow-none">
-                        <div className="instructor-image">
-                            <img src="assets/images/instructor-4.jpg" className="img-fluid" alt="image" />
-                            <div className="instructor-links">
-                                <ul>
-                                    <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-pinterest"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="instructor-body">
-                            <h4>Sophia Smith</h4>
-                            <p>Instructor</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+    <section>
+        <div id="spinners" className='d-flex justify-content-around'>
+            <i className="fa fa-spinner"></i>
+            <i className="fa fa-refresh"></i>
+            <i className="fa fa-gear"></i>
+            <i className="fa fa-circle-o-notch"></i>
+            <i className="fa fa-spinner"></i>
+            <i className="fa fa-cog"></i>
         </div>
     </section>
-    
-    <section className="blog-area">
-        <div className="container">
-            <div className="row">
-
-                <div className="col-lg-8 offset-lg-2">
-                    <div className="sec-heading text-center">
-                        <h4>blog</h4>
-                        <h2>Latest News</h2>
-                    </div>
-                </div>
-
-            </div>
-            <div className="row blog-post">
-
-                <div className="col-md-4">
-                    <div className="blog-post-single">
-                        <div className="post-media">
-                            <img src="assets/images/blog-5.jpg" className="img-fluid" alt="image" />
-                        </div>
-                        <div className="blog-post-content">
-                            <ul className="post-meta">
-                                <li>
-                                    <a href="#">
-                                        <i className="fa fa-user"><span>Omexo</span></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i className="fa fa-calendar"><span>20 Jan, 2022</span></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <h3><a href="#">Learn Webs Applications Development from Experts</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="col-md-4">
-                    <div className="blog-post-single">
-                        <div className="post-media">
-                            <img src="assets/images/blog-4.jpg" className="img-fluid" alt="image" />
-                        </div>
-                        <div className="blog-post-content">
-                            <ul className="post-meta">
-                                <li>
-                                    <a href="#">
-                                        <i className="fa fa-user"><span>Omexo</span></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i className="fa fa-calendar"><span>22 Jan, 2022</span></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <h3><a href="#">Expand Your Career Opportunities With Python</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="col-md-4">
-                    <div className="blog-post-single">
-                        <div className="post-media">
-                            <img src="assets/images/blog-3.jpg" className="img-fluid" alt="image" />
-                        </div>
-                        <div className="blog-post-content">
-                            <ul className="post-meta">
-                                <li>
-                                    <a href="#">
-                                        <i className="fa fa-user"><span>Omexo</span></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i className="fa fa-calendar"><span>24 Jan, 2022</span></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <h3><a href="#">Complete PHP Programming Career Guideline</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section> */}
     
         </>
   );
