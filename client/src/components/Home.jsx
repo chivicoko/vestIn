@@ -1,14 +1,4 @@
-import React, { useEffect, useState } from 'react'
-// import Button from './styles/Button';
-import group10 from '../assets/Group-10.png';
-import group11 from '../assets/Group-11.png';
 import ReactPlayer from 'react-player';
-import ultrexVid from '../assets/vestVid.mp4';
-import EthImg from '../assets/Ethereum-removebg.png';
-import LiteImg from '../assets/litecoin.png';
-import TetherImg from '../assets/Tether.png';
-import USDCoinImg from '../assets/USD-coin.png';
-import BitcoinImg from '../assets/Bitcoin-removebg.png';
 import { Link } from 'react-router-dom';
 
 import { useTranslation } from 'react-i18next';
