@@ -1,3 +1,4 @@
+// import './Header.jsx';
 import ReactPlayer from 'react-player';
 import { Link } from 'react-router-dom';
 
@@ -32,8 +33,8 @@ const Home = () => {
                 <h2>Connect With Our Expert And Start Learning Today</h2>
                 <p>We are providing high-quality online courses to improve your skill. Our all instructors are highly experienced and experts.</p>
                 <ul>
-                    <li><a href="#">Find courses</a></li>
-                    <li><a className="btn-bg" href="#">Start free trial</a></li>
+                    <li><a href="about-us.html">Find courses</a></li>
+                    <li><a className="btn-bg" href="contact.html">Start free trial</a></li>
                 </ul>
             </div>
         </div>
