@@ -3,39 +3,21 @@ import { Link } from 'react-router-dom';
 
 const Tracking = () => {
     
-    // // date - days of the week ------------
-    // const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-
-    // const today = new Date();
-    // let day = weekdays[today.getDay()];
-    // for (let aDay = 0; aDay < weekdays.length; aDay++) {
-    //     const singleDay = weekdays[aDay];
-    //     if (singleDay !== 'Saturday' && singleDay !== 'Sunday') {
-    //         // console.log(singleDay);
-    //     } else {
-    //         // console.log(`This is weekend!!! --(${singleDay})`);
-    //     }
-    // }
-    // // -------------------
-
   return (
         <>
         
     <section class="why-choose-area three bg-gray">
         <div class="container">
             <div class="row">
-
                 <div class="col-lg-8 offset-lg-2">
                     <div class="sec-heading  text-center">
                         <h4>Track</h4>
                         <h2>Track Your Order</h2>
                     </div>
                 </div>
-
             </div>
 
             <div class="row text-center">
-
                 <div class="col-12">
                     <div class="choose-single three mb-3">
                         <div class="delivery-date text-left">
@@ -66,24 +48,11 @@ const Tracking = () => {
                 </div>
                 
                 <div class="col-4 p-0 m-0 text-justify">
-                    <Link to={'/orders'} className="btn" style={{padding: '10px 70px', color: 'white', fontSize: '16px', borderRadius: '5px', border: 'none', outline: 'none', background: 'green', margin: '20px 0 0 18px'}}>View all orders</Link>
+                    <Link to={'/orders'} className="btn btn-success" style={{padding: '10px 70px', color: 'white', fontSize: '16px', borderRadius: '5px', border: 'none', outline: 'none', margin: '20px 0 0 18px'}}>View all orders</Link>
                 </div>
-                
             </div>
         </div>
     </section>
-{/* 
-    <script>
-        document.getElementById('flexRadioDefault1').addEventListener('click', () => {
-            document.querySelector('.delivery-date h5 span').innerText = document.querySelector('.delivery-1').innerText;
-        });
-        document.getElementById('flexRadioDefault2').addEventListener('click', () => {
-            document.querySelector('.delivery-date h5 span').innerText = document.querySelector('.delivery-2').innerText;
-        });
-        document.getElementById('flexRadioDefault3').addEventListener('click', () => {
-            document.querySelector('.delivery-date h5 span').innerText = document.querySelector('.delivery-3').innerText;
-        });
-    </script> */}
 
     </>
 );

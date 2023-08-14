@@ -2,21 +2,16 @@
 import { Link } from 'react-router-dom';
 
 const Checkout = () => {
-    
-    // // date - days of the week ------------
-    // const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
-    // const today = new Date();
-    // let day = weekdays[today.getDay()];
-    // for (let aDay = 0; aDay < weekdays.length; aDay++) {
-    //     const singleDay = weekdays[aDay];
-    //     if (singleDay !== 'Saturday' && singleDay !== 'Sunday') {
-    //         // console.log(singleDay);
-    //     } else {
-    //         // console.log(`This is weekend!!! --(${singleDay})`);
-    //     }
-    // }
-    // // -------------------
+    // document.getElementById('flexRadioDefault1').addEventListener('click', () => {
+    //     document.querySelector('.delivery-date h5 span').innerText = document.querySelector('.delivery-1').innerText;
+    // });
+    // document.getElementById('flexRadioDefault2').addEventListener('click', () => {
+    //     document.querySelector('.delivery-date h5 span').innerText = document.querySelector('.delivery-2').innerText;
+    // });
+    // document.getElementById('flexRadioDefault3').addEventListener('click', () => {
+    //     document.querySelector('.delivery-date h5 span').innerText = document.querySelector('.delivery-3').innerText;
+    // });
 
   return (
         <>
@@ -34,11 +29,8 @@ const Checkout = () => {
 
             </div>
             <div class="row text-center">
-
                 <div class="col-md-8">
-
                     <div class="choose-single three mb-3">
-
                         <div class="delivery-date text-left">
                             <h5>Delivery Date: <span class="text-success"></span></h5>
                         </div>
@@ -76,11 +68,8 @@ const Checkout = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
-
                 
                 <div class="col-md-4 pr-0">
                     <div class="choose-single three">
@@ -94,26 +83,13 @@ const Checkout = () => {
                             <h5 class="d-flex justify-content-between"><span>Order total:</span><span>$267.41</span></h5>
                             <hr/>
                             <div class="text-left mb-4">Use Paypal <input type="checkbox" name="" id="" /></div>
-                            <Link to={'/orders'} className="btn" style={{padding: '10px 97px', color:'white', fontSize: '16px', borderRadius: '5px', border: 'none', outline: 'none', background: 'green', margin: '0 0 50px'}}>Place your order</Link>
+                            <Link to={'/orders'} className="btn btn-success" style={{padding: '10px 97px', color:'white', fontSize: '16px', borderRadius: '5px', border: 'none', outline: 'none', margin: '0 0 50px'}}>Place your order</Link>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-
-    {/* <script>
-        document.getElementById('flexRadioDefault1').addEventListener('click', () => {
-            document.querySelector('.delivery-date h5 span').innerText = document.querySelector('.delivery-1').innerText;
-        });
-        document.getElementById('flexRadioDefault2').addEventListener('click', () => {
-            document.querySelector('.delivery-date h5 span').innerText = document.querySelector('.delivery-2').innerText;
-        });
-        document.getElementById('flexRadioDefault3').addEventListener('click', () => {
-            document.querySelector('.delivery-date h5 span').innerText = document.querySelector('.delivery-3').innerText;
-        });
-    </script> */}
   
 </>
 );

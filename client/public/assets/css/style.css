@@ -55,6 +55,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -477,6 +478,8 @@ p {
 }
 
 .main-menu-area .header2-course-search input {
+    caret-color: #FF630E;
+    box-shadow: none;
     height: 55px;
     width: 600px;
 }
@@ -4630,3 +4633,45 @@ p {
 
     font-size: 20px;
 }
+
+/* blink animation */
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-right: 4px solid #FF630E;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.blink1{
+    animation: typewriter 8s steps(34) 1s 1 both,
+               blinkCursor 500ms steps(34) infinite;
+    -webkit-animation: typewriter 8s steps(34) 1s 1 both,
+               blinkCursor 500ms steps(34) infinite;
+    -moz-animation: typewriter 8s steps(34) 1s 1 both,
+               blinkCursor 500ms steps(34) infinite;
+    -ms-animation: typewriter 8s steps(34) 1s 1 both,
+               blinkCursor 500ms steps(34) infinite;
+    -o-animation: typewriter 8s steps(34) 1s 1 both,
+               blinkCursor 500ms steps(34) infinite;
+  }
+
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 72vw;
+    }
+  }
+  
+  @keyframes blinkCursor{
+    from {
+      border-right-color: #FF630E;
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }

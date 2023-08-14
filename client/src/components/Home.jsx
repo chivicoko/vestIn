@@ -17,6 +17,11 @@ const Home = () => {
     // }
     // // -------------------
 
+    setInterval(() => {
+        document.querySelector('.text').classList.toggle('blink1');
+    }, 11000);
+
+
   return (
         <>
 
@@ -24,9 +29,9 @@ const Home = () => {
         <div className="container">
             <div className="caption-content text-center">
                 <h4>Start learning from home</h4>
-                <h2>Connect With Our Expert And Start Learning Today</h2>
+                <h2 className="text blink1">Connect And Start Learning Today.</h2>
                 <p>We are providing high-quality online courses to improve your skill. Our all instructors are highly experienced and experts.</p>
-                <ul>
+                <ul style={{marginTop: '150px'}}>
                     <li><a href="about-us.html">Find courses</a></li>
                     <li><a className="btn-bg" href="contact.html">Start free trial</a></li>
                 </ul>
@@ -34,9 +39,7 @@ const Home = () => {
         </div>
     </section>
 
-
     {/* ecommerce */}
-    
     <section class="course-archive mb-5">
         <div class="container">
             <div class="row">
@@ -227,7 +230,7 @@ const Home = () => {
                                         </div>
                                         <div class="course-cart">
                                             <i class="fa fa-shopping-cart"></i>
-                                            <span><Link to={'checkout'}>Add to cart</Link></span>
+                                            <span><Link to={''}>Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
@@ -316,7 +319,7 @@ const Home = () => {
                                         </div>
                                         <div class="course-cart">
                                             <i class="fa fa-shopping-cart"></i>
-                                            <span><Link to={'checkout'}>Add to cart</Link></span>
+                                            <span><Link to={''}>Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
@@ -361,7 +364,7 @@ const Home = () => {
                                         </div>
                                         <div class="course-cart">
                                             <i class="fa fa-shopping-cart"></i>
-                                            <span><Link to={'checkout'}>Add to cart</Link></span>
+                                            <span><Link to={''}>Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
@@ -406,7 +409,7 @@ const Home = () => {
                                         </div>
                                         <div class="course-cart">
                                             <i class="fa fa-shopping-cart"></i>
-                                            <span><Link to={'checkout'} href="#">Add to cart</Link></span>
+                                            <span><Link to={''} href="#">Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
@@ -451,7 +454,7 @@ const Home = () => {
                                         </div>
                                         <div class="course-cart">
                                             <i class="fa fa-shopping-cart"></i>
-                                            <span><Link to={'checkout'} href="#">Add to cart</Link></span>
+                                            <span><Link to={''} href="#">Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
@@ -496,7 +499,7 @@ const Home = () => {
                                         </div>
                                         <div class="course-cart">
                                             <i class="fa fa-shopping-cart"></i>
-                                            <span><Link to={'checkout'} href="#">Add to cart</Link></span>
+                                            <span><Link to={''} href="#">Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
@@ -585,7 +588,7 @@ const Home = () => {
                                         </div>
                                         <div class="course-cart">
                                             <i class="fa fa-shopping-cart"></i>
-                                            <span><Link to={'checkout'} href="#">Add to cart</Link></span>
+                                            <span><Link to={''} href="#">Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>

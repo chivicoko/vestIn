@@ -163,5 +163,8 @@ setInterval(() => {
 }, 3000);
 
 // cart
-let text = document.getElementById('cartNnum').innerText;
-console.log(text);
+document.getElementById('cartNnum').innerText = 0;
+
+// document.querySelector('.course-cart').addEventListener('click', () => {
+//     document.getElementById('cartNnum').innerText ++;
+// });
