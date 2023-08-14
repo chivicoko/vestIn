@@ -632,6 +632,15 @@ const Home = () => {
             </div>
         </div>
     </section>
+
+    <div class="slides-container">
+        <img class="slide" src="https://images.unsplash.com/photo-1478104718532-efe04cc3ff7f" />
+        <img class="slide" src="https://images.unsplash.com/photo-1472437774355-71ab6752b434" />
+        <img class="slide" src="https://images.unsplash.com/photo-1572985025058-f27aeca1b8bf" />
+        <img class="slide" src="https://images.unsplash.com/photo-1478104718532-efe04cc3ff7f" />
+        <img class="slide" src="https://images.unsplash.com/photo-1472437774355-71ab6752b434" />
+        <img class="slide" src="https://images.unsplash.com/photo-1572985025058-f27aeca1b8bf" />
+    </div>
         
     <section className="newsletter-area pt-5">
         <div className="container">

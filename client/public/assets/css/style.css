@@ -377,7 +377,7 @@ p {
     height: 70px;
     -ms-flex-preferred-size: 55%;
     flex-basis: 55%;
-    background: linear-gradient(to right, rgb(237, 201, 134) 10%, orange 80%, rgb(237, 201, 134) 10%);
+    background: linear-gradient(to right, #f0a47b 10%, #FF630E 80%, #f0a47b 10%);
 }
 
 .header-top-social .better-deal1 {
@@ -855,6 +855,10 @@ p {
     color: #fff;
     font-weight: 700;
     margin-bottom: 20px;
+    -webkit-text-stroke: 5px #FF630E;
+    -moz-text-stroke: 1px #FF630E;
+    -ms-text-stroke: 1px #FF630E;
+    -o-text-stroke: 1px #FF630E;
 }
 
 .caption-content p {
@@ -4675,3 +4679,27 @@ p {
       border-right-color: transparent;
     }
   }
+
+  /* custom cursor */
+  img {
+    cursor: url("/path"), auto;
+  }
+
+  /* image zoom */
+  /* img:hover {
+    transform: scale(1.02);
+  } */
+
+  /* carousel/slide */
+.slides-container {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    overflow-x: scroll;
+  }
+  
+  .slide {
+    height: 500px;
+    scroll-snap-align: start;
+  }
+  

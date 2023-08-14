@@ -163,7 +163,7 @@ setInterval(() => {
 }, 3000);
 
 // cart
-document.getElementById('cartNnum').innerText = 0;
+// document.getElementById('cartNnum').innerText = 0;
 
 // document.querySelector('.course-cart').addEventListener('click', () => {
 //     document.getElementById('cartNnum').innerText ++;
