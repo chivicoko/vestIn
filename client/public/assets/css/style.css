@@ -855,7 +855,7 @@ p {
     color: #fff;
     font-weight: 700;
     margin-bottom: 20px;
-    -webkit-text-stroke: 5px #FF630E;
+    -webkit-text-stroke: 1px #FF630E;
     -moz-text-stroke: 1px #FF630E;
     -ms-text-stroke: 1px #FF630E;
     -o-text-stroke: 1px #FF630E;

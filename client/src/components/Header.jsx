@@ -140,7 +140,7 @@ const Header = () => {
                       <ul>
                           <li>
                               <Link to={'/checkout'}><i className="fa fa-shopping-cart"></i>
-                                  <span className="cart-total-number" id="cartNnum"></span>
+                                  <span className="cart-total-number" id="cartNnum">0</span>
                               </Link>
                           </li>
                       </ul>

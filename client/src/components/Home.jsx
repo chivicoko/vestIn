@@ -611,36 +611,14 @@ const Home = () => {
     </section>
     {/* end ecommerce */}
 
-    <section className="discount-area overlay mt-5">
-        <div className="container mt-5">
-            <div className="discount-wrap">
-
-                <div className="discount-img">
-                    <img src="assets/images/img-1.jpg" className="img-fluid" alt="1" />
-                </div>
-                
-                <div className="discount-cont">
-                    <h4>Limited time offer</h4>
-                    <h2>50% Discount On All Of Our New & Upcoming Courses</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing . Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit.</p>
-                    <div id="countdown"></div>
-                    <div className="btn-default">
-                        <Link to={''}>Enroll Now</Link>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <div class="slides-container">
+    {/* <div class="slides-container">
         <img class="slide" src="https://images.unsplash.com/photo-1478104718532-efe04cc3ff7f" />
         <img class="slide" src="https://images.unsplash.com/photo-1472437774355-71ab6752b434" />
         <img class="slide" src="https://images.unsplash.com/photo-1572985025058-f27aeca1b8bf" />
         <img class="slide" src="https://images.unsplash.com/photo-1478104718532-efe04cc3ff7f" />
         <img class="slide" src="https://images.unsplash.com/photo-1472437774355-71ab6752b434" />
         <img class="slide" src="https://images.unsplash.com/photo-1572985025058-f27aeca1b8bf" />
-    </div>
+    </div> */}
         
     <section className="newsletter-area pt-5">
         <div className="container">
@@ -660,84 +638,11 @@ const Home = () => {
         </div>
     </section>
     
-    <section className="why-choose-area">
-        <div className="container">
-            <div className="row">
-
-                <div className="col-md-4">
-                    <div className="why-choose-intro">
-                        <h2>Why Choose Us?</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat.</p>
-                        <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</p>
-                        <div className="why-choose-btn">
-                            <Link to={''}>Learn More</Link>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="col-md-8">
-                    <div className="row">
-
-                        <div className="col-md-6">
-                            <div className="why-choose-single">
-                                <div className="why-choose-icon">
-                                    <img src="assets/images/icons/ribbon.svg" className="img-fluid" alt="ribbone-svg" />
-                                </div>
-                                <div className="why-choose-cont">
-                                    <h3>High Quality Courses</h3>
-                                    <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="col-md-6">
-                            <div className="why-choose-single">
-                                <div className="why-choose-icon">
-                                    <img src="assets/images/icons/teacher.svg" className="img-fluid" alt="teacher-svg" />
-                                </div>
-                                <div className="why-choose-cont">
-                                    <h3>Expert Instructors</h3>
-                                    <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="col-md-6">
-                            <div className="why-choose-single">
-                                <div className="why-choose-icon">
-                                    <img src="assets/images/icons/folder.svg" className="img-fluid" alt="folder-svg" />
-                                </div>
-                                <div className="why-choose-cont">
-                                    <h3>Life Time Access</h3>
-                                    <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="col-md-6">
-                            <div className="why-choose-single">
-                                <div className="why-choose-icon">
-                                    <img src="assets/images/icons/24-hours.svg" className="img-fluid" alt="24-hours-svg" />
-                                </div>
-                                <div className="why-choose-cont">
-                                    <h3>Dedicated Support</h3>
-                                    <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
     <section>
         <div id="spinners" className='d-flex justify-content-around'>
+            <i className="fa fa-gear"></i>
             <i className="fa fa-spinner"></i>
             <i className="fa fa-refresh"></i>
-            <i className="fa fa-gear"></i>
             <i className="fa fa-circle-o-notch"></i>
             <i className="fa fa-spinner"></i>
             <i className="fa fa-cog"></i>
