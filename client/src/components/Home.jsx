@@ -1,9 +1,4 @@
-// import './Header.jsx';
-import ReactPlayer from 'react-player';
-import { Link } from 'react-router-dom';
-
-import { useTranslation } from 'react-i18next';
-import i18next from 'i18next'
+import { Link } from "react-router-dom";
 
 const Home = () => {
     
@@ -24,7 +19,6 @@ const Home = () => {
 
   return (
         <>
-        
 
     <section className="hero-area">
         <div className="container">
@@ -200,10 +194,10 @@ const Home = () => {
                                 <div class="course-header">
                                     <h5>All Levels</h5>
                                     <div class="course-card-icon">
-                                        <img src="assets/images/icons/ribbon-1.svg" alt="image" />
+                                        <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
                                     </div>
                                     <div class="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-3.jpg" class="img-fluid" alt="image" /></a>
+                                        <a href="course-single.html"><img src="assets/images/course-3.jpg" class="img-fluid" alt="course3" /></a>
                                     </div>
                                 </div>
                                 <div class="course-content four">
@@ -233,7 +227,7 @@ const Home = () => {
                                         </div>
                                         <div class="course-cart">
                                             <i class="fa fa-shopping-cart"></i>
-                                            <span><a href="#">Add to cart</a></span>
+                                            <span><Link to={'checkout'}>Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
@@ -245,10 +239,10 @@ const Home = () => {
                                 <div class="course-header">
                                     <h5>Intermediate</h5>
                                     <div class="course-card-icon">
-                                        <img src="assets/images/icons/ribbon-1.svg" alt="image" />
+                                        <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
                                     </div>
                                     <div class="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-1.jpg" class="img-fluid" alt="image" /></a>
+                                        <a href="course-single.html"><img src="assets/images/course-1.jpg" class="img-fluid" alt="course1" /></a>
                                     </div>
                                 </div>
                                 <div class="course-content four">
@@ -263,7 +257,7 @@ const Home = () => {
                                         <span class="course-rating-count">5.00 (8)</span>
                                     </div>
                                     <div class="course-title">
-                                        <h3><a href="course-single.html">PHP Beginners – Become a PHP Master</a></h3>
+                                        <h3><a href="course-single.html">PHP Beginners - Become a PHP Master</a></h3>
                                     </div>
                                     <ul class="course-meta">
                                         <li><i class="fa fa-clock-o"></i> 3h 32m</li>
@@ -277,7 +271,7 @@ const Home = () => {
                                             <span>Free</span>
                                         </div>
                                         <div class="course-cart">
-                                            <span><a href="#">Get Enrolled</a></span>
+                                            <span><Link to={''}>Get Enrolled</Link></span>
                                         </div>
                                     </div>
                                 </div>
@@ -289,10 +283,10 @@ const Home = () => {
                                 <div class="course-header">
                                     <h5>Beginner</h5>
                                     <div class="course-card-icon">
-                                        <img src="assets/images/icons/ribbon-1.svg" alt="image" />
+                                        <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
                                     </div>
                                     <div class="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-11.jpg" class="img-fluid" alt="image" /></a>
+                                        <a href="course-single.html"><img src="assets/images/course-11.jpg" class="img-fluid" alt="course11" /></a>
                                     </div>
                                 </div>
                                 <div class="course-content four">
@@ -322,7 +316,7 @@ const Home = () => {
                                         </div>
                                         <div class="course-cart">
                                             <i class="fa fa-shopping-cart"></i>
-                                            <span><a href="#">Add to cart</a></span>
+                                            <span><Link to={'checkout'}>Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
@@ -334,10 +328,10 @@ const Home = () => {
                                 <div class="course-header">
                                     <h5>Intermediate</h5>
                                     <div class="course-card-icon">
-                                        <img src="assets/images/icons/ribbon-1.svg" alt="image" />
+                                        <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
                                     </div>
                                     <div class="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-4.jpg" class="img-fluid" alt="image" /></a>
+                                        <a href="course-single.html"><img src="assets/images/course-4.jpg" class="img-fluid" alt="course4" /></a>
                                     </div>
                                 </div>
                                 <div class="course-content four">
@@ -367,7 +361,7 @@ const Home = () => {
                                         </div>
                                         <div class="course-cart">
                                             <i class="fa fa-shopping-cart"></i>
-                                            <span><a href="#">Add to cart</a></span>
+                                            <span><Link to={'checkout'}>Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
@@ -379,10 +373,10 @@ const Home = () => {
                                 <div class="course-header">
                                     <h5>Beginner</h5>
                                     <div class="course-card-icon">
-                                        <img src="assets/images/icons/ribbon-1.svg" alt="image" />
+                                        <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
                                     </div>
                                     <div class="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-9.jpg" class="img-fluid" alt="image" /></a>
+                                        <a href="course-single.html"><img src="assets/images/course-9.jpg" class="img-fluid" alt="course9" /></a>
                                     </div>
                                 </div>
                                 <div class="course-content four">
@@ -412,7 +406,7 @@ const Home = () => {
                                         </div>
                                         <div class="course-cart">
                                             <i class="fa fa-shopping-cart"></i>
-                                            <span><a href="#">Add to cart</a></span>
+                                            <span><Link to={'checkout'} href="#">Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
@@ -424,10 +418,10 @@ const Home = () => {
                                 <div class="course-header">
                                     <h5>All Levels</h5>
                                     <div class="course-card-icon">
-                                        <img src="assets/images/icons/ribbon-1.svg" alt="image" />
+                                        <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
                                     </div>
                                     <div class="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-5.jpg" class="img-fluid" alt="image" /></a>
+                                        <a href="course-single.html"><img src="assets/images/course-5.jpg" class="img-fluid" alt="course5" /></a>
                                     </div>
                                 </div>
                                 <div class="course-content four">
@@ -457,7 +451,7 @@ const Home = () => {
                                         </div>
                                         <div class="course-cart">
                                             <i class="fa fa-shopping-cart"></i>
-                                            <span><a href="#">Add to cart</a></span>
+                                            <span><Link to={'checkout'} href="#">Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
@@ -469,10 +463,10 @@ const Home = () => {
                                 <div class="course-header">
                                     <h5>All Levels</h5>
                                     <div class="course-card-icon">
-                                        <img src="assets/images/icons/ribbon-1.svg" alt="image" />
+                                        <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
                                     </div>
                                     <div class="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-10.jpg" class="img-fluid" alt="image" /></a>
+                                        <a href="course-single.html"><img src="assets/images/course-10.jpg" class="img-fluid" alt="course10" /></a>
                                     </div>
                                 </div>
                                 <div class="course-content four">
@@ -502,7 +496,7 @@ const Home = () => {
                                         </div>
                                         <div class="course-cart">
                                             <i class="fa fa-shopping-cart"></i>
-                                            <span><a href="#">Add to cart</a></span>
+                                            <span><Link to={'checkout'} href="#">Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
@@ -514,10 +508,10 @@ const Home = () => {
                                 <div class="course-header">
                                     <h5>Intermediate</h5>
                                     <div class="course-card-icon">
-                                        <img src="assets/images/icons/ribbon-1.svg" alt="image" />
+                                        <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
                                     </div>
                                     <div class="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-11.jpg" class="img-fluid" alt="image" /></a>
+                                        <a href="course-single.html"><img src="assets/images/course-11.jpg" class="img-fluid" alt="course11" /></a>
                                     </div>
                                 </div>
                                 <div class="course-content four">
@@ -546,7 +540,7 @@ const Home = () => {
                                             <span>Free</span>
                                         </div>
                                         <div class="course-cart">
-                                            <span><a href="#">Get Enrolled</a></span>
+                                            <span><Link to={''}>Get Enrolled</Link></span>
                                         </div>
                                     </div>
                                 </div>
@@ -558,10 +552,10 @@ const Home = () => {
                                 <div class="course-header">
                                     <h5>Beginner</h5>
                                     <div class="course-card-icon">
-                                        <img src="assets/images/icons/ribbon-1.svg" alt="image" />
+                                        <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
                                     </div>
                                     <div class="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-8.jpg" class="img-fluid" alt="image" /></a>
+                                        <a href="course-single.html"><img src="assets/images/course-8.jpg" class="img-fluid" alt="course8" /></a>
                                     </div>
                                 </div>
                                 <div class="course-content four">
@@ -576,7 +570,7 @@ const Home = () => {
                                         <span class="course-rating-count">5.00 (8)</span>
                                     </div>
                                     <div class="course-title">
-                                        <h3><a href="course-single.html">Complete Trello – Beginners to Advanced</a></h3>
+                                        <h3><a href="course-single.html">Complete Trello - Beginners to Advanced</a></h3>
                                     </div>
                                     <ul class="course-meta">
                                         <li><i class="fa fa-clock-o"></i> 04h 16m</li>
@@ -591,7 +585,7 @@ const Home = () => {
                                         </div>
                                         <div class="course-cart">
                                             <i class="fa fa-shopping-cart"></i>
-                                            <span><a href="#">Add to cart</a></span>
+                                            <span><Link to={'checkout'} href="#">Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
@@ -603,8 +597,8 @@ const Home = () => {
                         <div class="col-lg-12">
                             <ul class="course-pagination text-center">
                                 <li><span>1</span></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                <li><Link to={''}>2</Link></li>
+                                <li><Link to={''}><i class="fa fa-angle-right"></i></Link></li>
                             </ul>
                         </div>
                     </div>
@@ -628,7 +622,7 @@ const Home = () => {
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing . Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit.</p>
                     <div id="countdown"></div>
                     <div className="btn-default">
-                        <a href="#">Enroll Now</a>
+                        <Link to={''}>Enroll Now</Link>
                     </div>
                 </div>
 
@@ -664,7 +658,7 @@ const Home = () => {
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat.</p>
                         <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</p>
                         <div className="why-choose-btn">
-                            <a href="#">Learn More</a>
+                            <Link to={''}>Learn More</Link>
                         </div>
                     </div>
                 </div>

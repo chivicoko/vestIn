@@ -1,10 +1,9 @@
+// import { Link } from "react-router-dom";
 
 const Footer = () => {
-    
-    
+
   return (
     <>
-
 
     <footer className="footer-area">
 
@@ -14,8 +13,7 @@ const Footer = () => {
 
                   <div className="col-lg-3 col-md-6">
                       <div className="footer-widget logo">
-                          {/* <a href="#"><img src="assets/images/logo-white-1.png" alt="logo" /></a> */}
-                            <a className="logo" href="index.html">
+                            <a className="logo" href="">
                                 <h3 className="text-light">
                                     <i className="fa fa-gg-circle" style={{color: '#FF630E', fontSize: '50px'}}></i>
                                     vestIn
@@ -108,7 +106,6 @@ const Footer = () => {
       </div>
 
   </footer>
-
 
     </>
   )
