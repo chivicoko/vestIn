@@ -1,7 +1,14 @@
 
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 const Checkout = () => {
+    const [deliveryDate, setDeliveryDate] = useState('');
+
+    const updateDelivery = (e) => {
+        // setDeliveryDate(document.querySelector('.delivery-1').innerText);
+        alert(e.target.innerText);
+        alert(e.target.tagName);
+    }
 
     // document.getElementById('flexRadioDefault1').addEventListener('click', () => {
     //     document.querySelector('.delivery-date h5 span').innerText = document.querySelector('.delivery-1').innerText;
@@ -16,73 +23,73 @@ const Checkout = () => {
   return (
         <>
         
-    <section class="why-choose-area three bg-gray">
-        <div class="container">
-            <div class="row">
+    <section className="why-choose-area three bg-gray">
+        <div className="container">
+            <div className="row">
 
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="sec-heading  text-center">
+                <div className="col-lg-8 offset-lg-2">
+                    <div className="sec-heading  text-center">
                         <h4>Checkout (9 items)</h4>
                         <h2>Review Your Order</h2>
                     </div>
                 </div>
 
             </div>
-            <div class="row text-center">
-                <div class="col-md-8">
-                    <div class="choose-single three mb-3">
-                        <div class="delivery-date text-left">
-                            <h5>Delivery Date: <span class="text-success"></span></h5>
+            <div className="row text-center">
+                <div className="col-md-8">
+                    <div className="choose-single three mb-3">
+                        <div className="delivery-date text-left">
+                            <h5>Delivery Date: <span className="text-success">{deliveryDate}</span></h5>
                         </div>
-                        <div class="two d-flex px-0">
-                            <div class="col-7 testi-client-info">
-                                <div class="testi-client-img">
+                        <div className="two d-flex px-0">
+                            <div className="col-7 testi-client-info">
+                                <div className="testi-client-img">
                                     <img src="assets/images/client-2.jpg" alt="client2" />
                                 </div>
-                                <div class="testi-client-details text-left">
+                                <div className="testi-client-details text-left">
                                     <h5>6-Piece Nonstick, Carbon Steel Oven Bakeware Baking Set</h5>
                                     <p style={{color: '#ff630e'}}>$44.83</p>
                                     <h6>Quality: 5</h6>
-                                    <div class="d-flex justify-content-between pr-5"><Link to={''}>Update</Link> <Link to={''}>Delete</Link></div>
+                                    <div className="d-flex justify-content-between pr-5"><Link to={''}>Update</Link> <Link to={''}>Delete</Link></div>
                                 </div>
                             </div>
                             
-                            <div class="col-4 p-0 m-0 text-justify">
-                                <div class="testi-rating">
-                                    <h5 class="">Choose a delivery option</h5>
+                            <div className="col-4 p-0 m-0 text-justify">
+                                <div className="testi-rating">
+                                    <h5 className="">Choose a delivery option</h5>
                                 </div>
 
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
-                                    <label class="form-check-label" for="flexRadioDefault1"> <span class="delivery-1 text-success">Wednesday, August 16</span> <br/> $9.99 - shipping </label>
+                                <div className="form-check">
+                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                                    <label className="form-check-label" htmlFor="flexRadioDefault1"> <span className="delivery-1 text-success" onClick={updateDelivery}>Wednesday, August 16</span> <br/> $9.99 - shipping </label>
                                 </div>
                                 
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
-                                    <label class="form-check-label" for="flexRadioDefault1"> <span class="delivery-2 text-success">Thursday, August 17</span> <br/> $5.04 - shipping </label>
+                                <div className="form-check">
+                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
+                                    <label className="form-check-label" htmlFor="flexRadioDefault1"> <span className="delivery-2 text-success" onClick={updateDelivery}>Thursday, August 17</span> <br/> $5.04 - shipping </label>
                                 </div>
 
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3"/>
-                                    <label class="form-check-label" for="flexRadioDefault1"> <span class="delivery-3 text-success">Friday, August 18</span> <br/> FREE shipping </label>
+                                <div className="form-check">
+                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3"/>
+                                    <label className="form-check-label" htmlFor="flexRadioDefault1"> <span className="delivery-3 text-success" onClick={updateDelivery}>Friday, August 18</span> <br/> FREE shipping </label>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-md-4 pr-0">
-                    <div class="choose-single three">
-                        <div class="why-choose-cont three">
-                            <h3 class="text-left">Order Summary</h3>
-                            <p class="d-flex justify-content-between"><span>Items (9)</span><span>$243.10</span></p>
-                            <p class="d-flex justify-content-between"><span>Shipping and handling</span><span style={{borderBottom: '1px solid gray'}}>$5.56</span></p>
-                            <p class="d-flex justify-content-between"><span>Total before tax</span><span>$243.10</span></p>
-                            <p class="d-flex justify-content-between"><span>Estimated tax (10%)</span><span>$24.32</span></p>
+                <div className="col-md-4 pr-0">
+                    <div className="choose-single three">
+                        <div className="why-choose-cont three">
+                            <h3 className="text-left">Order Summary</h3>
+                            <p className="d-flex justify-content-between"><span>Items (9)</span><span>$243.10</span></p>
+                            <p className="d-flex justify-content-between"><span>Shipping and handling</span><span style={{borderBottom: '1px solid gray'}}>$5.56</span></p>
+                            <p className="d-flex justify-content-between"><span>Total before tax</span><span>$243.10</span></p>
+                            <p className="d-flex justify-content-between"><span>Estimated tax (10%)</span><span>$24.32</span></p>
                             <hr/>
-                            <h5 class="d-flex justify-content-between"><span>Order total:</span><span>$267.41</span></h5>
+                            <h5 className="d-flex justify-content-between"><span>Order total:</span><span>$267.41</span></h5>
                             <hr/>
-                            <div class="text-left mb-4">Use Paypal <input type="checkbox" name="" id="" /></div>
+                            <div className="text-left mb-4">Use Paypal <input type="checkbox" name="" id="" /></div>
                             <Link to={'/orders'} className="btn btn-success" style={{padding: '10px 97px', color:'white', fontSize: '16px', borderRadius: '5px', border: 'none', outline: 'none', margin: '0 0 50px'}}>Place your order</Link>
                         </div>
                     </div>

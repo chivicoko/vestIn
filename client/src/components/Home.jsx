@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useGlobContext } from "../context";
 
 const Home = () => {
+    const {cartUpdate} = useGlobContext();
     
     // // date - days of the week ------------
     // const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
@@ -16,10 +18,6 @@ const Home = () => {
     //     }
     // }
     // // -------------------
-
-    setInterval(() => {
-        document.querySelector('.text').classList.toggle('blink1');
-    }, 11000);
 
 
   return (
@@ -40,147 +38,147 @@ const Home = () => {
     </section>
 
     {/* ecommerce */}
-    <section class="course-archive mb-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-5">
-                    <div class="course-sidebar">
-                        <div class="course-sidebar-search">
-                            <input type="text" value="" name="s" placeholder="Search..." class="form-control" />
-                            <button type="submit"><i class="fa fa-search"></i></button>
+    <section className="course-archive mb-5">
+        <div className="container">
+            <div className="row">
+                <div className="col-lg-3 col-md-5">
+                    <div className="course-sidebar">
+                        <div className="course-sidebar-search">
+                            <input type="text" value="" name="s" placeholder="Search..." className="form-control" />
+                            <button type="submit"><i className="fa fa-search"></i></button>
                         </div>
 
-                        <div class="filter-category">
+                        <div className="filter-category">
                             <h4>Category</h4>
                             <form action="#" method="post">
-                                <div class="form-check">
-                                    <label class="form-check-label" for="check1">
-                                        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" />Business
+                                <div className="form-check">
+                                    <label className="form-check-label" htmlFor="check1">
+                                        <input type="checkbox" className="form-check-input" id="check1" name="option1" value="something" />Business
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <label class="form-check-label" for="check2">
-                                        <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something" />Design
+                                <div className="form-check">
+                                    <label className="form-check-label" htmlFor="check2">
+                                        <input type="checkbox" className="form-check-input" id="check2" name="option2" value="something" />Design
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <label class="form-check-label" for="check3">
-                                        <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" />Development
+                                <div className="form-check">
+                                    <label className="form-check-label" htmlFor="check3">
+                                        <input type="checkbox" className="form-check-input" id="check3" name="option3" value="something" />Development
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <label class="form-check-label" for="check4">
-                                        <input type="checkbox" class="form-check-input" id="check4" name="option3" value="something" />Graphic Design
+                                <div className="form-check">
+                                    <label className="form-check-label" htmlFor="check4">
+                                        <input type="checkbox" className="form-check-input" id="check4" name="option3" value="something" />Graphic Design
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <label class="form-check-label" for="check5">
-                                        <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" />Heath & Fitness
+                                <div className="form-check">
+                                    <label className="form-check-label" htmlFor="check5">
+                                        <input type="checkbox" className="form-check-input" id="check5" name="option5" value="something" />Heath & Fitness
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <label class="form-check-label" for="check6">
-                                        <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something" />Marketing
+                                <div className="form-check">
+                                    <label className="form-check-label" htmlFor="check6">
+                                        <input type="checkbox" className="form-check-input" id="check6" name="option6" value="something" />Marketing
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <label class="form-check-label" for="check7">
-                                        <input type="checkbox" class="form-check-input" id="check7" name="option7" value="something" />Math
+                                <div className="form-check">
+                                    <label className="form-check-label" htmlFor="check7">
+                                        <input type="checkbox" className="form-check-input" id="check7" name="option7" value="something" />Math
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <label class="form-check-label" for="check8">
-                                        <input type="checkbox" class="form-check-input" id="check8" name="option8" value="something" />Photography
+                                <div className="form-check">
+                                    <label className="form-check-label" htmlFor="check8">
+                                        <input type="checkbox" className="form-check-input" id="check8" name="option8" value="something" />Photography
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <label class="form-check-label" for="check9">
-                                        <input type="checkbox" class="form-check-input" id="check9" name="option9" value="something" />PHP
+                                <div className="form-check">
+                                    <label className="form-check-label" htmlFor="check9">
+                                        <input type="checkbox" className="form-check-input" id="check9" name="option9" value="something" />PHP
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <label class="form-check-label" for="check10">
-                                        <input type="checkbox" class="form-check-input" id="check10" name="option10" value="something" />WordPress
+                                <div className="form-check">
+                                    <label className="form-check-label" htmlFor="check10">
+                                        <input type="checkbox" className="form-check-input" id="check10" name="option10" value="something" />WordPress
                                     </label>
                                 </div>
                             </form>
                         </div>
                         
-                        <div class="filter-tag">
+                        <div className="filter-tag">
                             <h4>Tag</h4>
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />App Development
+                            <div className="form-check">
+                                <label className="form-check-label">
+                                    <input type="checkbox" className="form-check-input" value="" />App Development
                                 </label>
                             </div>
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Graphic Design
+                            <div className="form-check">
+                                <label className="form-check-label">
+                                    <input type="checkbox" className="form-check-input" value="" />Graphic Design
                                 </label>
                             </div>
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Heath & Fitness
+                            <div className="form-check">
+                                <label className="form-check-label">
+                                    <input type="checkbox" className="form-check-input" value="" />Heath & Fitness
                                 </label>
                             </div>
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />PHP
+                            <div className="form-check">
+                                <label className="form-check-label">
+                                    <input type="checkbox" className="form-check-input" value="" />PHP
                                 </label>
                             </div>
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />UX Design
+                            <div className="form-check">
+                                <label className="form-check-label">
+                                    <input type="checkbox" className="form-check-input" value="" />UX Design
                                 </label>
                             </div>
                         </div>
                         
-                        <div class="filter-level">
+                        <div className="filter-level">
                             <h4>Level</h4>
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Beginner
+                            <div className="form-check">
+                                <label className="form-check-label">
+                                    <input type="checkbox" className="form-check-input" value="" />Beginner
                                 </label>
                             </div>
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Intermediate
+                            <div className="form-check">
+                                <label className="form-check-label">
+                                    <input type="checkbox" className="form-check-input" value="" />Intermediate
                                 </label>
                             </div>
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Expert
+                            <div className="form-check">
+                                <label className="form-check-label">
+                                    <input type="checkbox" className="form-check-input" value="" />Expert
                                 </label>
                             </div>
                         </div>
                         
-                        <div class="filter-price">
+                        <div className="filter-price">
                             <h4>Price</h4>
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Free
+                            <div className="form-check">
+                                <label className="form-check-label">
+                                    <input type="checkbox" className="form-check-input" value="" />Free
                                 </label>
                             </div>
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Paid
+                            <div className="form-check">
+                                <label className="form-check-label">
+                                    <input type="checkbox" className="form-check-input" value="" />Paid
                                 </label>
                             </div>
                         </div>
 
                     </div>
                 </div>
-                <div class="col-lg-9 col-md-7">
-                    <div class="row search-result">
-                        <div class="col-lg-6 col-md-3">
-                            <div class="tutor-courses">
+                <div className="col-lg-9 col-md-7">
+                    <div className="row search-result">
+                        <div className="col-lg-6 col-md-3">
+                            <div className="tutor-courses">
                                 <h5><span>9</span> Courses</h5>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-9">
-                            <div class="tutor-course-archive float-right">
-                                <form class="tutor-course-form">
-                                    <select class="form-control">
+                        <div className="col-lg-6 col-md-9">
+                            <div className="tutor-course-archive float-right">
+                                <form className="tutor-course-form">
+                                    <select className="form-control">
                                         <option value="newest_first">Release Date (newest first)</option>
                                         <option value="oldest_first">Release Date (oldest first)</option>
                                         <option value="course_title_az">Course Title (a-z)</option>
@@ -190,90 +188,90 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div className="row">
 
-                        <div class="col-lg-4">
-                            <div class="course-card four">
-                                <div class="course-header">
+                        <div className="col-lg-4">
+                            <div className="course-card four">
+                                <div className="course-header">
                                     <h5>All Levels</h5>
-                                    <div class="course-card-icon">
+                                    <div className="course-card-icon">
                                         <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
                                     </div>
-                                    <div class="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-3.jpg" class="img-fluid" alt="course3" /></a>
+                                    <div className="course-thumbnail">
+                                        <a href="course-single.html"><img src="assets/images/course-3.jpg" className="img-fluid" alt="course3" /></a>
                                     </div>
                                 </div>
-                                <div class="course-content four">
-                                    <div class="course-rating">
-                                        <div class="star-rating-group">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
+                                <div className="course-content four">
+                                    <div className="course-rating">
+                                        <div className="star-rating-group">
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
                                         </div>
-                                        <span class="course-rating-count">5.00 (2)</span>
+                                        <span className="course-rating-count">5.00 (2)</span>
                                     </div>
-                                    <div class="course-title">
+                                    <div className="course-title">
                                         <h3><a href="course-single.html">Nutrition: Build Your Perfect Diet & Meal Plan</a></h3>
                                     </div>
-                                    <ul class="course-meta">
-                                        <li><i class="fa fa-clock-o"></i> 02h 20m</li>
-                                        <li><i class="fa fa-user"></i> 58</li>
+                                    <ul className="course-meta">
+                                        <li><i className="fa fa-clock-o"></i> 02h 20m</li>
+                                        <li><i className="fa fa-user"></i> 58</li>
                                     </ul>
-                                    <div class="course-author">
-                                        <div class="avator">A</div> By <span class="author-name">Admin</span>
+                                    <div className="course-author">
+                                        <div className="avator">A</div> By <span className="author-name">Admin</span>
                                     </div>
-                                    <div class="course-content-footer">
-                                        <div class="course-price four">
+                                    <div className="course-content-footer">
+                                        <div className="course-price four">
                                             <span>$15.00</span>
                                         </div>
-                                        <div class="course-cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                            <span><Link to={''}>Add to cart</Link></span>
+                                        <div className="course-cart">
+                                            <i className="fa fa-shopping-cart"></i>
+                                            <span><Link to={''} onClick={cartUpdate}>Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="col-lg-4">
-                            <div class="course-card four">
-                                <div class="course-header">
+                        <div className="col-lg-4">
+                            <div className="course-card four">
+                                <div className="course-header">
                                     <h5>Intermediate</h5>
-                                    <div class="course-card-icon">
+                                    <div className="course-card-icon">
                                         <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
                                     </div>
-                                    <div class="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-1.jpg" class="img-fluid" alt="course1" /></a>
+                                    <div className="course-thumbnail">
+                                        <a href="course-single.html"><img src="assets/images/course-1.jpg" className="img-fluid" alt="course1" /></a>
                                     </div>
                                 </div>
-                                <div class="course-content four">
-                                    <div class="course-rating">
-                                        <div class="star-rating-group">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
+                                <div className="course-content four">
+                                    <div className="course-rating">
+                                        <div className="star-rating-group">
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
                                         </div>
-                                        <span class="course-rating-count">5.00 (8)</span>
+                                        <span className="course-rating-count">5.00 (8)</span>
                                     </div>
-                                    <div class="course-title">
+                                    <div className="course-title">
                                         <h3><a href="course-single.html">PHP Beginners - Become a PHP Master</a></h3>
                                     </div>
-                                    <ul class="course-meta">
-                                        <li><i class="fa fa-clock-o"></i> 3h 32m</li>
-                                        <li><i class="fa fa-user"></i> 66</li>
+                                    <ul className="course-meta">
+                                        <li><i className="fa fa-clock-o"></i> 3h 32m</li>
+                                        <li><i className="fa fa-user"></i> 66</li>
                                     </ul>
-                                    <div class="course-author">
-                                        <div class="avator">A</div> By <span class="author-name">Admin</span>
+                                    <div className="course-author">
+                                        <div className="avator">A</div> By <span className="author-name">Admin</span>
                                     </div>
-                                    <div class="course-content-footer">
-                                        <div class="course-price four">
+                                    <div className="course-content-footer">
+                                        <div className="course-price four">
                                             <span>Free</span>
                                         </div>
-                                        <div class="course-cart">
+                                        <div className="course-cart">
                                             <span><Link to={''}>Get Enrolled</Link></span>
                                         </div>
                                     </div>
@@ -281,314 +279,314 @@ const Home = () => {
                             </div>
                         </div>
                         
-                        <div class="col-lg-4">
-                            <div class="course-card four">
-                                <div class="course-header">
+                        <div className="col-lg-4">
+                            <div className="course-card four">
+                                <div className="course-header">
                                     <h5>Beginner</h5>
-                                    <div class="course-card-icon">
+                                    <div className="course-card-icon">
                                         <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
                                     </div>
-                                    <div class="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-11.jpg" class="img-fluid" alt="course11" /></a>
+                                    <div className="course-thumbnail">
+                                        <a href="course-single.html"><img src="assets/images/course-11.jpg" className="img-fluid" alt="course11" /></a>
                                     </div>
                                 </div>
-                                <div class="course-content four">
-                                    <div class="course-rating">
-                                        <div class="star-rating-group">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-half-o"></i>
+                                <div className="course-content four">
+                                    <div className="course-rating">
+                                        <div className="star-rating-group">
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star-half-o"></i>
                                         </div>
-                                        <span class="course-rating-count">4.50 (9)</span>
+                                        <span className="course-rating-count">4.50 (9)</span>
                                     </div>
-                                    <div class="course-title">
+                                    <div className="course-title">
                                         <h3><a href="course-single.html">WordPress Master Class for Beginners</a></h3>
                                     </div>
-                                    <ul class="course-meta">
-                                        <li><i class="fa fa-clock-o"></i>07h 30m</li>
-                                        <li><i class="fa fa-user"></i> 33</li>
+                                    <ul className="course-meta">
+                                        <li><i className="fa fa-clock-o"></i>07h 30m</li>
+                                        <li><i className="fa fa-user"></i> 33</li>
                                     </ul>
-                                    <div class="course-author">
-                                        <div class="avator">A</div> By <span class="author-name">Admin</span>
+                                    <div className="course-author">
+                                        <div className="avator">A</div> By <span className="author-name">Admin</span>
                                     </div>
-                                    <div class="course-content-footer">
-                                        <div class="course-price four">
+                                    <div className="course-content-footer">
+                                        <div className="course-price four">
                                             <span>$29.00</span>
                                         </div>
-                                        <div class="course-cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                            <span><Link to={''}>Add to cart</Link></span>
+                                        <div className="course-cart">
+                                            <i className="fa fa-shopping-cart"></i>
+                                            <span><Link to={''} onClick={cartUpdate}>Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="col-lg-4">
-                            <div class="course-card four">
-                                <div class="course-header">
+                        <div className="col-lg-4">
+                            <div className="course-card four">
+                                <div className="course-header">
                                     <h5>Intermediate</h5>
-                                    <div class="course-card-icon">
+                                    <div className="course-card-icon">
                                         <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
                                     </div>
-                                    <div class="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-4.jpg" class="img-fluid" alt="course4" /></a>
+                                    <div className="course-thumbnail">
+                                        <a href="course-single.html"><img src="assets/images/course-4.jpg" className="img-fluid" alt="course4" /></a>
                                     </div>
                                 </div>
-                                <div class="course-content four">
-                                    <div class="course-rating">
-                                        <div class="star-rating-group">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-half-o"></i>
+                                <div className="course-content four">
+                                    <div className="course-rating">
+                                        <div className="star-rating-group">
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star-half-o"></i>
                                         </div>
-                                        <span class="course-rating-count">4.50 (5)</span>
+                                        <span className="course-rating-count">4.50 (5)</span>
                                     </div>
-                                    <div class="course-title">
+                                    <div className="course-title">
                                         <h3><a href="course-single.html">The Complete JavaScript Course 2022</a></h3>
                                     </div>
-                                    <ul class="course-meta">
-                                        <li><i class="fa fa-clock-o"></i> 09h 59m</li>
-                                        <li><i class="fa fa-user"></i> 14</li>
+                                    <ul className="course-meta">
+                                        <li><i className="fa fa-clock-o"></i> 09h 59m</li>
+                                        <li><i className="fa fa-user"></i> 14</li>
                                     </ul>
-                                    <div class="course-author">
-                                        <div class="avator">A</div> By <span class="author-name">Admin</span>
+                                    <div className="course-author">
+                                        <div className="avator">A</div> By <span className="author-name">Admin</span>
                                     </div>
-                                    <div class="course-content-footer">
-                                        <div class="course-price four">
+                                    <div className="course-content-footer">
+                                        <div className="course-price four">
                                             <span>$17.00</span>
                                         </div>
-                                        <div class="course-cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                            <span><Link to={''}>Add to cart</Link></span>
+                                        <div className="course-cart">
+                                            <i className="fa fa-shopping-cart"></i>
+                                            <span><Link to={''} onClick={cartUpdate}>Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="col-lg-4">
-                            <div class="course-card four">
-                                <div class="course-header">
+                        <div className="col-lg-4">
+                            <div className="course-card four">
+                                <div className="course-header">
                                     <h5>Beginner</h5>
-                                    <div class="course-card-icon">
+                                    <div className="course-card-icon">
                                         <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
                                     </div>
-                                    <div class="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-9.jpg" class="img-fluid" alt="course9" /></a>
+                                    <div className="course-thumbnail">
+                                        <a href="course-single.html"><img src="assets/images/course-9.jpg" className="img-fluid" alt="course9" /></a>
                                     </div>
                                 </div>
-                                <div class="course-content four">
-                                    <div class="course-rating">
-                                        <div class="star-rating-group">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
+                                <div className="course-content four">
+                                    <div className="course-rating">
+                                        <div className="star-rating-group">
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
                                         </div>
-                                        <span class="course-rating-count">5.00 (2)</span>
+                                        <span className="course-rating-count">5.00 (2)</span>
                                     </div>
-                                    <div class="course-title">
+                                    <div className="course-title">
                                         <h3><a href="course-single.html">User Experience Design Essentials</a></h3>
                                     </div>
-                                    <ul class="course-meta">
-                                        <li><i class="fa fa-clock-o"></i> 02h 20m</li>
-                                        <li><i class="fa fa-user"></i> 45</li>
+                                    <ul className="course-meta">
+                                        <li><i className="fa fa-clock-o"></i> 02h 20m</li>
+                                        <li><i className="fa fa-user"></i> 45</li>
                                     </ul>
-                                    <div class="course-author">
-                                        <div class="avator">A</div> By <span class="author-name">Admin</span>
+                                    <div className="course-author">
+                                        <div className="avator">A</div> By <span className="author-name">Admin</span>
                                     </div>
-                                    <div class="course-content-footer">
-                                        <div class="course-price four">
+                                    <div className="course-content-footer">
+                                        <div className="course-price four">
                                             <span>$22.00</span>
                                         </div>
-                                        <div class="course-cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                            <span><Link to={''} href="#">Add to cart</Link></span>
+                                        <div className="course-cart">
+                                            <i className="fa fa-shopping-cart"></i>
+                                            <span><Link to={''} onClick={cartUpdate}>Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="col-lg-4">
-                            <div class="course-card four">
-                                <div class="course-header">
+                        <div className="col-lg-4">
+                            <div className="course-card four">
+                                <div className="course-header">
                                     <h5>All Levels</h5>
-                                    <div class="course-card-icon">
+                                    <div className="course-card-icon">
                                         <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
                                     </div>
-                                    <div class="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-5.jpg" class="img-fluid" alt="course5" /></a>
+                                    <div className="course-thumbnail">
+                                        <a href="course-single.html"><img src="assets/images/course-5.jpg" className="img-fluid" alt="course5" /></a>
                                     </div>
                                 </div>
-                                <div class="course-content four">
-                                    <div class="course-rating">
-                                        <div class="star-rating-group">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-half-o"></i>
+                                <div className="course-content four">
+                                    <div className="course-rating">
+                                        <div className="star-rating-group">
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star-half-o"></i>
                                         </div>
-                                        <span class="course-rating-count">4.50 (8)</span>
+                                        <span className="course-rating-count">4.50 (8)</span>
                                     </div>
-                                    <div class="course-title">
+                                    <div className="course-title">
                                         <h3><a href="course-single.html">Ultimate Photoshop Training: From Beginner</a></h3>
                                     </div>
-                                    <ul class="course-meta">
-                                        <li><i class="fa fa-clock-o"></i> 04h 39m</li>
-                                        <li><i class="fa fa-user"></i> 26</li>
+                                    <ul className="course-meta">
+                                        <li><i className="fa fa-clock-o"></i> 04h 39m</li>
+                                        <li><i className="fa fa-user"></i> 26</li>
                                     </ul>
-                                    <div class="course-author">
-                                        <div class="avator">A</div> By <span class="author-name">Admin</span>
+                                    <div className="course-author">
+                                        <div className="avator">A</div> By <span className="author-name">Admin</span>
                                     </div>
-                                    <div class="course-content-footer">
-                                        <div class="course-price four">
+                                    <div className="course-content-footer">
+                                        <div className="course-price four">
                                             <span>$25.00</span>
                                         </div>
-                                        <div class="course-cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                            <span><Link to={''} href="#">Add to cart</Link></span>
+                                        <div className="course-cart">
+                                            <i className="fa fa-shopping-cart"></i>
+                                            <span><Link to={''} onClick={cartUpdate}>Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-4">
-                            <div class="course-card four">
-                                <div class="course-header">
+                        <div className="col-lg-4">
+                            <div className="course-card four">
+                                <div className="course-header">
                                     <h5>All Levels</h5>
-                                    <div class="course-card-icon">
+                                    <div className="course-card-icon">
                                         <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
                                     </div>
-                                    <div class="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-10.jpg" class="img-fluid" alt="course10" /></a>
+                                    <div className="course-thumbnail">
+                                        <a href="course-single.html"><img src="assets/images/course-10.jpg" className="img-fluid" alt="course10" /></a>
                                     </div>
                                 </div>
-                                <div class="course-content four">
-                                    <div class="course-rating">
-                                        <div class="star-rating-group">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
+                                <div className="course-content four">
+                                    <div className="course-rating">
+                                        <div className="star-rating-group">
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
                                         </div>
-                                        <span class="course-rating-count">4.50 (7)</span>
+                                        <span className="course-rating-count">4.50 (7)</span>
                                     </div>
-                                    <div class="course-title">
+                                    <div className="course-title">
                                         <h3><a href="course-single.html">Blender Creator : Learn 3D Modelling</a></h3>
                                     </div>
-                                    <ul class="course-meta">
-                                        <li><i class="fa fa-clock-o"></i> 07h 12m</li>
-                                        <li><i class="fa fa-user"></i> 10</li>
+                                    <ul className="course-meta">
+                                        <li><i className="fa fa-clock-o"></i> 07h 12m</li>
+                                        <li><i className="fa fa-user"></i> 10</li>
                                     </ul>
-                                    <div class="course-author">
-                                        <div class="avator">A</div> By <span class="author-name">Admin</span>
+                                    <div className="course-author">
+                                        <div className="avator">A</div> By <span className="author-name">Admin</span>
                                     </div>
-                                    <div class="course-content-footer">
-                                        <div class="course-price four">
+                                    <div className="course-content-footer">
+                                        <div className="course-price four">
                                             <span>$19.00</span>
                                         </div>
-                                        <div class="course-cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                            <span><Link to={''} href="#">Add to cart</Link></span>
+                                        <div className="course-cart">
+                                            <i className="fa fa-shopping-cart"></i>
+                                            <span><Link to={''} onClick={cartUpdate}>Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="col-lg-4">
-                            <div class="course-card four">
-                                <div class="course-header">
+                        <div className="col-lg-4">
+                            <div className="course-card four">
+                                <div className="course-header">
                                     <h5>Intermediate</h5>
-                                    <div class="course-card-icon">
+                                    <div className="course-card-icon">
                                         <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
                                     </div>
-                                    <div class="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-11.jpg" class="img-fluid" alt="course11" /></a>
+                                    <div className="course-thumbnail">
+                                        <a href="course-single.html"><img src="assets/images/course-11.jpg" className="img-fluid" alt="course11" /></a>
                                     </div>
                                 </div>
-                                <div class="course-content four">
-                                    <div class="course-rating">
-                                        <div class="star-rating-group">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-half-o"></i>
+                                <div className="course-content four">
+                                    <div className="course-rating">
+                                        <div className="star-rating-group">
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star-half-o"></i>
                                         </div>
-                                        <span class="course-rating-count">4.50 (5)</span>
+                                        <span className="course-rating-count">4.50 (5)</span>
                                     </div>
-                                    <div class="course-title">
+                                    <div className="course-title">
                                         <h3><a href="course-single.html">Sales Training: Practical Sales Techniques</a></h3>
                                     </div>
-                                    <ul class="course-meta">
-                                        <li><i class="fa fa-clock-o"></i> 03h 29m</li>
-                                        <li><i class="fa fa-user"></i> 29</li>
+                                    <ul className="course-meta">
+                                        <li><i className="fa fa-clock-o"></i> 03h 29m</li>
+                                        <li><i className="fa fa-user"></i> 29</li>
                                     </ul>
-                                    <div class="course-author">
-                                        <div class="avator">A</div> By <span class="author-name">Admin</span>
+                                    <div className="course-author">
+                                        <div className="avator">A</div> By <span className="author-name">Admin</span>
                                     </div>
-                                    <div class="course-content-footer">
-                                        <div class="course-price four">
+                                    <div className="course-content-footer">
+                                        <div className="course-price four">
                                             <span>Free</span>
                                         </div>
-                                        <div class="course-cart">
-                                            <span><Link to={''}>Get Enrolled</Link></span>
+                                        <div className="course-cart">
+                                            <span><Link to={''} onClick={cartUpdate}>Get Enrolled</Link></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="col-lg-4">
-                            <div class="course-card four">
-                                <div class="course-header">
+                        <div className="col-lg-4">
+                            <div className="course-card four">
+                                <div className="course-header">
                                     <h5>Beginner</h5>
-                                    <div class="course-card-icon">
+                                    <div className="course-card-icon">
                                         <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
                                     </div>
-                                    <div class="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-8.jpg" class="img-fluid" alt="course8" /></a>
+                                    <div className="course-thumbnail">
+                                        <a href="course-single.html"><img src="assets/images/course-8.jpg" className="img-fluid" alt="course8" /></a>
                                     </div>
                                 </div>
-                                <div class="course-content four">
-                                    <div class="course-rating">
-                                        <div class="star-rating-group">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
+                                <div className="course-content four">
+                                    <div className="course-rating">
+                                        <div className="star-rating-group">
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
                                         </div>
-                                        <span class="course-rating-count">5.00 (8)</span>
+                                        <span className="course-rating-count">5.00 (8)</span>
                                     </div>
-                                    <div class="course-title">
+                                    <div className="course-title">
                                         <h3><a href="course-single.html">Complete Trello - Beginners to Advanced</a></h3>
                                     </div>
-                                    <ul class="course-meta">
-                                        <li><i class="fa fa-clock-o"></i> 04h 16m</li>
-                                        <li><i class="fa fa-user"></i> 12</li>
+                                    <ul className="course-meta">
+                                        <li><i className="fa fa-clock-o"></i> 04h 16m</li>
+                                        <li><i className="fa fa-user"></i> 12</li>
                                     </ul>
-                                    <div class="course-author">
-                                        <div class="avator">A</div> By <span class="author-name">Admin</span>
+                                    <div className="course-author">
+                                        <div className="avator">A</div> By <span className="author-name">Admin</span>
                                     </div>
-                                    <div class="course-content-footer">
-                                        <div class="course-price four">
+                                    <div className="course-content-footer">
+                                        <div className="course-price four">
                                             <span>$26.00</span>
                                         </div>
-                                        <div class="course-cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                            <span><Link to={''} href="#">Add to cart</Link></span>
+                                        <div className="course-cart">
+                                            <i className="fa fa-shopping-cart"></i>
+                                            <span><Link to={''} onClick={cartUpdate}>Add to cart</Link></span>
                                         </div>
                                     </div>
                                 </div>
@@ -596,12 +594,12 @@ const Home = () => {
                         </div>
 
                     </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <ul class="course-pagination text-center">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <ul className="course-pagination text-center">
                                 <li><span>1</span></li>
                                 <li><Link to={''}>2</Link></li>
-                                <li><Link to={''}><i class="fa fa-angle-right"></i></Link></li>
+                                <li><Link to={''}><i className="fa fa-angle-right"></i></Link></li>
                             </ul>
                         </div>
                     </div>
@@ -611,13 +609,13 @@ const Home = () => {
     </section>
     {/* end ecommerce */}
 
-    {/* <div class="slides-container">
-        <img class="slide" src="https://images.unsplash.com/photo-1478104718532-efe04cc3ff7f" />
-        <img class="slide" src="https://images.unsplash.com/photo-1472437774355-71ab6752b434" />
-        <img class="slide" src="https://images.unsplash.com/photo-1572985025058-f27aeca1b8bf" />
-        <img class="slide" src="https://images.unsplash.com/photo-1478104718532-efe04cc3ff7f" />
-        <img class="slide" src="https://images.unsplash.com/photo-1472437774355-71ab6752b434" />
-        <img class="slide" src="https://images.unsplash.com/photo-1572985025058-f27aeca1b8bf" />
+    {/* <div className="slides-container">
+        <img className="slide" src="https://images.unsplash.com/photo-1478104718532-efe04cc3ff7f" />
+        <img className="slide" src="https://images.unsplash.com/photo-1472437774355-71ab6752b434" />
+        <img className="slide" src="https://images.unsplash.com/photo-1572985025058-f27aeca1b8bf" />
+        <img className="slide" src="https://images.unsplash.com/photo-1478104718532-efe04cc3ff7f" />
+        <img className="slide" src="https://images.unsplash.com/photo-1472437774355-71ab6752b434" />
+        <img className="slide" src="https://images.unsplash.com/photo-1572985025058-f27aeca1b8bf" />
     </div> */}
         
     <section className="newsletter-area pt-5">
