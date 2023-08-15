@@ -44,16 +44,16 @@ const Orders = () => {
                                 </div>
                             </div>
                             
-                            <div className="col-4 p-0 m-0 text-justify">
-                                <Link to={'/tracking'} className="btn btn-success" style={{padding: '10px 70px', color: 'white', fontSize: '16px', borderRadius: '5px', border: 'none', outline: 'none', margin: '20px 0 0'}}>Track package</Link>
+                            <div className="col-4 ml-5 text-justify">
+                                <Link to={'/tracking'} className="btn btn-success mb-2 mt-5 ml-5" style={{padding: '10px 70px', fontSize: '16px'}}>Track package</Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="col-4 p-0 m-0 text-justify">
-                <Link to={'/checkout'} className="btn btn-dark" style={{padding: '10px 70px', color: 'white', fontSize: '16px', borderRadius: '5px', border: 'none', outline: 'none', margin: '20px 0 0'}}>Back to Checkout</Link>
+            <div className="col-4 p-0 mt-4 text-justify">
+                <Link to={'/checkout'} className="btn btn-dark mb-2" style={{padding: '10px 70px', fontSize: '16px'}}>Back to Checkout</Link>
             </div>
         </div>
     </section>

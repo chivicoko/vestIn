@@ -47,8 +47,8 @@ const Tracking = () => {
                     </div>
                 </div>
                 
-                <div className="col-4 p-0 m-0 text-justify">
-                    <Link to={'/orders'} classNameName="btn btn-success" style={{padding: '10px 70px', color: 'white', fontSize: '16px', borderRadius: '5px', border: 'none', outline: 'none', margin: '20px 0 0 18px'}}>View all orders</Link>
+                <div className="col-4 mt-4 text-justify">
+                    <Link to={'/orders'} className="btn btn-dark mb-2" style={{padding: '10px 70px', fontSize: '16px'}}>View all orders</Link>
                 </div>
             </div>
         </div>

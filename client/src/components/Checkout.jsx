@@ -5,20 +5,8 @@ const Checkout = () => {
     const [deliveryDate, setDeliveryDate] = useState('');
 
     const updateDelivery = (e) => {
-        // setDeliveryDate(document.querySelector('.delivery-1').innerText);
-        alert(e.target.innerText);
-        alert(e.target.tagName);
+        setDeliveryDate(e.target.value);
     }
-
-    // document.getElementById('flexRadioDefault1').addEventListener('click', () => {
-    //     document.querySelector('.delivery-date h5 span').innerText = document.querySelector('.delivery-1').innerText;
-    // });
-    // document.getElementById('flexRadioDefault2').addEventListener('click', () => {
-    //     document.querySelector('.delivery-date h5 span').innerText = document.querySelector('.delivery-2').innerText;
-    // });
-    // document.getElementById('flexRadioDefault3').addEventListener('click', () => {
-    //     document.querySelector('.delivery-date h5 span').innerText = document.querySelector('.delivery-3').innerText;
-    // });
 
   return (
         <>
@@ -60,18 +48,9 @@ const Checkout = () => {
                                 </div>
 
                                 <div className="form-check">
-                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
-                                    <label className="form-check-label" htmlFor="flexRadioDefault1"> <span className="delivery-1 text-success" onClick={updateDelivery}>Wednesday, August 16</span> <br/> $9.99 - shipping </label>
-                                </div>
-                                
-                                <div className="form-check">
-                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
-                                    <label className="form-check-label" htmlFor="flexRadioDefault1"> <span className="delivery-2 text-success" onClick={updateDelivery}>Thursday, August 17</span> <br/> $5.04 - shipping </label>
-                                </div>
-
-                                <div className="form-check">
-                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3"/>
-                                    <label className="form-check-label" htmlFor="flexRadioDefault1"> <span className="delivery-3 text-success" onClick={updateDelivery}>Friday, August 18</span> <br/> FREE shipping </label>
+                                    <input onClick={updateDelivery} type="radio" value="Wednesday, August 16" name="gender" /> <span className="delivery-1 text-success" onClick={updateDelivery}>Wednesday, August 16</span> <br/> $9.99 - shipping <br /> <br />
+                                    <input onClick={updateDelivery} type="radio" value="Thursday, August 17" name="gender" /> <span className="delivery-1 text-success" onClick={updateDelivery}>Thursday, August 17</span> <br/> $5.04 - shipping <br /> <br />
+                                    <input onClick={updateDelivery} type="radio" value="Friday, August 18" name="gender" /> <span className="delivery-1 text-success" onClick={updateDelivery}>Friday, August 18</span> <br/> FREE shipping
                                 </div>
                             </div>
                         </div>
@@ -79,7 +58,7 @@ const Checkout = () => {
                 </div>
                 
                 <div className="col-md-4 pr-0">
-                    <div className="choose-single three">
+                    <div className="choose-single three pr-0">
                         <div className="why-choose-cont three">
                             <h3 className="text-left">Order Summary</h3>
                             <p className="d-flex justify-content-between"><span>Items (9)</span><span>$243.10</span></p>
@@ -90,7 +69,7 @@ const Checkout = () => {
                             <h5 className="d-flex justify-content-between"><span>Order total:</span><span>$267.41</span></h5>
                             <hr/>
                             <div className="text-left mb-4">Use Paypal <input type="checkbox" name="" id="" /></div>
-                            <Link to={'/orders'} className="btn btn-success" style={{padding: '10px 97px', color:'white', fontSize: '16px', borderRadius: '5px', border: 'none', outline: 'none', margin: '0 0 50px'}}>Place your order</Link>
+                            <Link to={'/orders'} className="btn btn-success mb-2" style={{padding: '10px 109px', fontSize: '16px'}}>Place your order</Link>
                         </div>
                     </div>
                 </div>
