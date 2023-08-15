@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { useGlobContext } from "../context";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+    const [blink, setBlink] = useState('blink1');
     const {cartUpdate} = useGlobContext();
     
     // // date - days of the week ------------
@@ -19,6 +21,15 @@ const Home = () => {
     // }
     // // -------------------
 
+    useEffect(() => {
+        setInterval(() => {
+            if (blink === 'blink1') {
+                setBlink('');
+            } else {
+                setBlink('blink1');
+            }
+        }, 10000);
+    }, [blink]);
 
   return (
         <>
@@ -27,7 +38,7 @@ const Home = () => {
         <div className="container">
             <div className="caption-content text-center">
                 <h4>Start learning from home</h4>
-                <h2 className="text blink1">Connect And Start Learning Today.</h2>
+                <h2 className={`text ${blink}`}>Connect And Start Learning Today.</h2>
                 <p>We are providing high-quality online courses to improve your skill. Our all instructors are highly experienced and experts.</p>
                 <ul style={{marginTop: '150px'}}>
                     <li><a href="about-us.html">Find courses</a></li>

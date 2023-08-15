@@ -4681,9 +4681,9 @@ p {
   }
 
   /* custom cursor */
-  img {
+  /* img {
     cursor: url("/path"), auto;
-  }
+  } */
 
   /* image zoom */
   /* img:hover {

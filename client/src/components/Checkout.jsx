@@ -24,16 +24,14 @@ const Checkout = () => {
 
             </div>
             <div className="row text-center">
-                <div className="col-md-8">
-                    <div className="choose-single three mb-3">
-                        <div className="delivery-date text-left">
+                <div className="col-md-8 pr-0">
+                    <div className="choose-single three mb-3 pr-0">
+                        <div className="delivery-date text-left pr-0 pl-3">
                             <h5>Delivery Date: <span className="text-success">{deliveryDate}</span></h5>
                         </div>
                         <div className="two d-flex px-0">
-                            <div className="col-7 testi-client-info">
-                                <div className="testi-client-img">
-                                    <img src="assets/images/client-2.jpg" alt="client2" />
-                                </div>
+                            <div className="col-7 d-flex justify-content-between testi-client-info">
+                                <img className='mr-4 ml-0' src="assets/images/client-2.jpg" alt="client2" />
                                 <div className="testi-client-details text-left">
                                     <h5>6-Piece Nonstick, Carbon Steel Oven Bakeware Baking Set</h5>
                                     <p style={{color: '#ff630e'}}>$44.83</p>
@@ -42,15 +40,15 @@ const Checkout = () => {
                                 </div>
                             </div>
                             
-                            <div className="col-4 p-0 m-0 text-justify">
+                            <div className="col-4 p-0 m-0 text-right">
                                 <div className="testi-rating">
                                     <h5 className="">Choose a delivery option</h5>
                                 </div>
 
-                                <div className="form-check">
-                                    <input onClick={updateDelivery} type="radio" value="Wednesday, August 16" name="gender" /> <span className="delivery-1 text-success" onClick={updateDelivery}>Wednesday, August 16</span> <br/> $9.99 - shipping <br /> <br />
-                                    <input onClick={updateDelivery} type="radio" value="Thursday, August 17" name="gender" /> <span className="delivery-1 text-success" onClick={updateDelivery}>Thursday, August 17</span> <br/> $5.04 - shipping <br /> <br />
-                                    <input onClick={updateDelivery} type="radio" value="Friday, August 18" name="gender" /> <span className="delivery-1 text-success" onClick={updateDelivery}>Friday, August 18</span> <br/> FREE shipping
+                                <div className="form-check text-justify" style={{marginLeft: '85px'}}>
+                                    <input onClick={updateDelivery} type="radio" value="Wednesday, August 16" name="delivery-date" /> <span className="delivery-1 text-success" onClick={updateDelivery}>Wednesday, August 16</span> <br/> $9.99 - shipping <br /> <br />
+                                    <input onClick={updateDelivery} type="radio" value="Thursday, August 17" name="delivery-date" /> <span className="delivery-1 text-success" onClick={updateDelivery}>Thursday, August 17</span> <br/> $5.04 - shipping <br /> <br />
+                                    <input onClick={updateDelivery} type="radio" value="Friday, August 18" name="delivery-date" /> <span className="delivery-1 text-success" onClick={updateDelivery}>Friday, August 18</span> <br/> FREE shipping
                                 </div>
                             </div>
                         </div>
