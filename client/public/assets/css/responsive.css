@@ -78,10 +78,6 @@
         line-height: 60px;
         font-weight: 500;
         margin-bottom: 10px;
-        -webkit-text-stroke: .2px #FF630E !important;
-        -moz-text-stroke: .2px #FF630E !important;
-        -ms-text-stroke: .2px #FF630E !important;
-        -o-text-stroke: .2px #FF630E !important;
     }
 
     .caption-content h4 {
@@ -1566,5 +1562,19 @@
 
     .text {
         font-size: 20px !important;
+        -webkit-text-stroke: .8px #FF630E !important;
+        -moz-text-stroke: .8px #FF630E !important;
+        -ms-text-stroke: .8px #FF630E !important;
+        -o-text-stroke: .8px #FF630E !important;
     }
+
+    .mean-container .mean-bar {
+        display: none;
+    }
+    
+    .header-area.sticky .header-btm-area {
+        display: flex;
+        align-items: center;
+    }   
+
 }

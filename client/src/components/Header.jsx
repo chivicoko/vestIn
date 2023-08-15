@@ -15,37 +15,48 @@ const Header = () => {
           </div>
           <div className="sidebar-content">
               <div className="sidebar-logo">
-                  <Link to={'/'}>
-                      <img className="img-fluid" src="assets/images/logo.png" alt="logo.png" />
-                  </Link>
+                {/* <div className="site-logo">
+                    <Link to={'/'} className="logo"><h5><i className="fa fa-gg-circle"></i>vestIn</h5></Link>
+                </div> */}
               </div>
               <div className="mobile-menu"></div>
-              <div className="search-form">
+              <div className="search-form mt-5">
                   <input type="text" placeholder="Search Courses" className="form-control" />
                   <span><i className="fa fa-search"></i></span>
               </div>
               <div className="contact-info">
-                  <ul>
-                      <li><i className="fa fa-envelope"></i> support@example.com</li>
-                      <li><i className="fa fa-phone"></i> +98 012345 6789</li>
-                  </ul>
+                <ul className="sub-menu">
+                    <li><Link to={''}> <i className="fa fa-arrow-right"></i> Help Center</Link></li>
+                    <li><Link to={''}> <i className="fa fa-arrow-right"></i> Place and Track Order</Link></li>
+                    <li><Link to={''}> <i className="fa fa-arrow-right"></i> Order Cancelation</Link></li>
+                    <li><Link to={''}> <i className="fa fa-arrow-right"></i> Returns and Refunds</Link></li>
+                    <hr />
+                    <li><Link to={''}><i className="fa fa-shopping-bag"></i> Orders</Link></li>
+                    <li><Link to={''}><i className="fa fa-heart"></i> Saved Items</Link></li>                                    
+                    <li><Link to={''}><i className="fa fa-sign-in"></i> Sign In</Link></li>
+                    <li><Link to={''}><i className="fa fa-user-o"></i> Register</Link></li>
+                    <hr />
+                    <li><i className="fa fa-envelope"></i> support@vestin.com</li>
+                    <li><i className="fa fa-phone"></i> +234 012345 6789</li>
+                    <li><Link to={''}><i className="fa fa-comments"></i> &nbsp; Live Chat</Link></li>
+                </ul>
               </div>
               <div className="social-icon">
                   <ul>
                       <li><span>Follow Us:</span></li>
-                      <li><Link to={''}><i className="fa fa-twitter"></i></Link>
-                      </li>
+                      <li><Link to={''}><i className="fa fa-twitter"></i></Link></li>
                       <li><Link to={''}><i className="fa fa-linkedin"></i></Link></li>
-                      <li><Link to={''}><i className="fa fa-dribbble"></i></Link></li>
+                      <li><Link to={''}><i className="fa fa-facebook"></i></Link></li>
+                      <li><Link to={''}><i className="fa fa-instagram"></i></Link></li>
                   </ul>
               </div>
-              <div className="header-log-reg">
+              {/* <div className="header-log-reg">
                   <ul>
                       <li><Link to={''}>Login</Link></li>
                       <li><small>|</small></li>
                       <li><Link to={''}>Register</Link></li>
                   </ul>
-              </div>
+              </div> */}
           </div>
       </div>
   </div>
@@ -80,7 +91,7 @@ const Header = () => {
                   <div className="header-contact-info text-left pl-5">
                       <ul>
                           <li className="pr-3"><i className="fa fa-envelope mr-1"></i> support@vestin.com</li>
-                          <li className="pr-3"><i className="fa fa-phone mr-1"></i> +98 012345 6789</li>
+                          <li className="pr-3"><i className="fa fa-phone mr-1"></i> +234 012345 6789</li>
                       </ul>
                   </div>
 
