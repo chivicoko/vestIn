@@ -6,12 +6,13 @@ const AppContext = React.createContext();
 
 const AppProvider = ({children}) => {
     const [cartNum, setCartNum] = useState(JSON.parse(localStorage.getItem('cart') || 0));
+    const [products, setProducts] = useState([]);
     
     const productsUrl = 'https://dummyjson.com/products/';
     const fetchProducts = async (url) => {
         try {
             const {data} = await axios(url);
-            console.log(data);
+            setProducts(data.products);
         } catch (error) {
             console.log(error.response);
         }
@@ -21,7 +22,8 @@ const AppProvider = ({children}) => {
         fetchProducts(productsUrl);
     }, []);
 
-    const cartUpdate = () => {
+    const cartUpdate = (e) => {
+        // console.log(e.target);
         setCartNum(cartNum + 1);
     }
 
@@ -29,7 +31,7 @@ const AppProvider = ({children}) => {
         localStorage.setItem('cart', JSON.stringify(cartNum));
       }, [cartNum]);
 
-    return <AppContext.Provider value={{cartNum, cartUpdate}}>
+    return <AppContext.Provider value={{cartNum, cartUpdate, products}}>
         {children}
     </AppContext.Provider>
 }

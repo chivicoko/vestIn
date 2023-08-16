@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 // import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
+// import axios from "axios";
 
 import Home from "./components/Home";
 import Checkout from "./components/Checkout";
@@ -14,7 +14,7 @@ import Tracking from "./components/Tracking";
 
 function App() {
   // axios.defaults.baseURL = 'http://localhost:5000';
-  axios.defaults.withCredentials = true;
+  // axios.defaults.withCredentials = true;
 
   return (
     <Suspense fallback={null}>

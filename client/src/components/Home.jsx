@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 
 const Home = () => {
     const [blink, setBlink] = useState('blink1');
-    const {cartUpdate} = useGlobContext();
+    const {cartUpdate, products} = useGlobContext();
+    // console.log(products);
     
     // // date - days of the week ------------
     // const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
@@ -199,412 +200,57 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+
                     <div className="row">
-
-                        <div className="col-lg-4">
-                            <div className="course-card four">
-                                <div className="course-header">
-                                    <h5>All Levels</h5>
-                                    <div className="course-card-icon">
-                                        <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
-                                    </div>
-                                    <div className="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-3.jpg" className="img-fluid" alt="course3" /></a>
-                                    </div>
-                                </div>
-                                <div className="course-content four">
-                                    <div className="course-rating">
-                                        <div className="star-rating-group">
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                        </div>
-                                        <span className="course-rating-count">5.00 (2)</span>
-                                    </div>
-                                    <div className="course-title">
-                                        <h3><a href="course-single.html">Nutrition: Build Your Perfect Diet & Meal Plan</a></h3>
-                                    </div>
-                                    <ul className="course-meta">
-                                        <li><i className="fa fa-clock-o"></i> 02h 20m</li>
-                                        <li><i className="fa fa-user"></i> 58</li>
-                                    </ul>
-                                    <div className="course-author">
-                                        <div className="avator">A</div> By <span className="author-name">Admin</span>
-                                    </div>
-                                    <div className="course-content-footer">
-                                        <div className="course-price four">
-                                            <span>$15.00</span>
-                                        </div>
-                                        <div className="course-cart">
-                                            <i className="fa fa-shopping-cart"></i>
-                                            <span><Link to={''} onClick={cartUpdate}>Add to cart</Link></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="col-lg-4">
-                            <div className="course-card four">
-                                <div className="course-header">
-                                    <h5>Intermediate</h5>
-                                    <div className="course-card-icon">
-                                        <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
-                                    </div>
-                                    <div className="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-1.jpg" className="img-fluid" alt="course1" /></a>
-                                    </div>
-                                </div>
-                                <div className="course-content four">
-                                    <div className="course-rating">
-                                        <div className="star-rating-group">
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                        </div>
-                                        <span className="course-rating-count">5.00 (8)</span>
-                                    </div>
-                                    <div className="course-title">
-                                        <h3><a href="course-single.html">PHP Beginners - Become a PHP Master</a></h3>
-                                    </div>
-                                    <ul className="course-meta">
-                                        <li><i className="fa fa-clock-o"></i> 3h 32m</li>
-                                        <li><i className="fa fa-user"></i> 66</li>
-                                    </ul>
-                                    <div className="course-author">
-                                        <div className="avator">A</div> By <span className="author-name">Admin</span>
-                                    </div>
-                                    <div className="course-content-footer">
-                                        <div className="course-price four">
-                                            <span>Free</span>
-                                        </div>
-                                        <div className="course-cart">
-                                            <span><Link to={''}>Get Enrolled</Link></span>
+                        {
+                            products.map((product) => {
+                                return (
+                                    <div key={product.id} className="col-lg-4">
+                                        <div className="course-card four">
+                                            <div className="course-header">
+                                                <h5>{product.discountPercentage} discount</h5>
+                                                <div className="course-card-icon">
+                                                    {product.stock}
+                                                </div>
+                                                <div className="course-thumbnail">
+                                                    <a href="course-single.html"><img style={{height: '200px', width: '280px'}} src={product.thumbnail} className="img-fluid" alt="course3" /></a>
+                                                </div>
+                                            </div>
+                                            <div className="course-content four">
+                                                <div className="course-rating">
+                                                    <div className="star-rating-group">
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                    </div>
+                                                    <span className="course-rating-count">{product.rating} (2)</span>
+                                                </div>
+                                                <div className="course-title" style={{overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: "nowrap"}}>
+                                                    <h4><a style={{fontSize: '17px'}} href="course-single.html">{product.title}</a></h4>
+                                                </div>
+                                                <ul className="course-meta d-flex justify-content-between">
+                                                    <li>{product.brand}</li>
+                                                    <li>{product.category}</li>
+                                                </ul>
+                                                <div className="course-content-footer">
+                                                    <div className="course-price four">
+                                                        <span>$ {product.price}.00</span>
+                                                    </div>
+                                                    <div className="course-cart">
+                                                        <i className="fa fa-shopping-cart"></i>
+                                                        <span><Link onClick={cartUpdate}>Add to cart</Link></span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="col-lg-4">
-                            <div className="course-card four">
-                                <div className="course-header">
-                                    <h5>Beginner</h5>
-                                    <div className="course-card-icon">
-                                        <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
-                                    </div>
-                                    <div className="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-11.jpg" className="img-fluid" alt="course11" /></a>
-                                    </div>
-                                </div>
-                                <div className="course-content four">
-                                    <div className="course-rating">
-                                        <div className="star-rating-group">
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star-half-o"></i>
-                                        </div>
-                                        <span className="course-rating-count">4.50 (9)</span>
-                                    </div>
-                                    <div className="course-title">
-                                        <h3><a href="course-single.html">WordPress Master Class for Beginners</a></h3>
-                                    </div>
-                                    <ul className="course-meta">
-                                        <li><i className="fa fa-clock-o"></i>07h 30m</li>
-                                        <li><i className="fa fa-user"></i> 33</li>
-                                    </ul>
-                                    <div className="course-author">
-                                        <div className="avator">A</div> By <span className="author-name">Admin</span>
-                                    </div>
-                                    <div className="course-content-footer">
-                                        <div className="course-price four">
-                                            <span>$29.00</span>
-                                        </div>
-                                        <div className="course-cart">
-                                            <i className="fa fa-shopping-cart"></i>
-                                            <span><Link to={''} onClick={cartUpdate}>Add to cart</Link></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="col-lg-4">
-                            <div className="course-card four">
-                                <div className="course-header">
-                                    <h5>Intermediate</h5>
-                                    <div className="course-card-icon">
-                                        <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
-                                    </div>
-                                    <div className="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-4.jpg" className="img-fluid" alt="course4" /></a>
-                                    </div>
-                                </div>
-                                <div className="course-content four">
-                                    <div className="course-rating">
-                                        <div className="star-rating-group">
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star-half-o"></i>
-                                        </div>
-                                        <span className="course-rating-count">4.50 (5)</span>
-                                    </div>
-                                    <div className="course-title">
-                                        <h3><a href="course-single.html">The Complete JavaScript Course 2022</a></h3>
-                                    </div>
-                                    <ul className="course-meta">
-                                        <li><i className="fa fa-clock-o"></i> 09h 59m</li>
-                                        <li><i className="fa fa-user"></i> 14</li>
-                                    </ul>
-                                    <div className="course-author">
-                                        <div className="avator">A</div> By <span className="author-name">Admin</span>
-                                    </div>
-                                    <div className="course-content-footer">
-                                        <div className="course-price four">
-                                            <span>$17.00</span>
-                                        </div>
-                                        <div className="course-cart">
-                                            <i className="fa fa-shopping-cart"></i>
-                                            <span><Link to={''} onClick={cartUpdate}>Add to cart</Link></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="col-lg-4">
-                            <div className="course-card four">
-                                <div className="course-header">
-                                    <h5>Beginner</h5>
-                                    <div className="course-card-icon">
-                                        <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
-                                    </div>
-                                    <div className="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-9.jpg" className="img-fluid" alt="course9" /></a>
-                                    </div>
-                                </div>
-                                <div className="course-content four">
-                                    <div className="course-rating">
-                                        <div className="star-rating-group">
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                        </div>
-                                        <span className="course-rating-count">5.00 (2)</span>
-                                    </div>
-                                    <div className="course-title">
-                                        <h3><a href="course-single.html">User Experience Design Essentials</a></h3>
-                                    </div>
-                                    <ul className="course-meta">
-                                        <li><i className="fa fa-clock-o"></i> 02h 20m</li>
-                                        <li><i className="fa fa-user"></i> 45</li>
-                                    </ul>
-                                    <div className="course-author">
-                                        <div className="avator">A</div> By <span className="author-name">Admin</span>
-                                    </div>
-                                    <div className="course-content-footer">
-                                        <div className="course-price four">
-                                            <span>$22.00</span>
-                                        </div>
-                                        <div className="course-cart">
-                                            <i className="fa fa-shopping-cart"></i>
-                                            <span><Link to={''} onClick={cartUpdate}>Add to cart</Link></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="col-lg-4">
-                            <div className="course-card four">
-                                <div className="course-header">
-                                    <h5>All Levels</h5>
-                                    <div className="course-card-icon">
-                                        <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
-                                    </div>
-                                    <div className="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-5.jpg" className="img-fluid" alt="course5" /></a>
-                                    </div>
-                                </div>
-                                <div className="course-content four">
-                                    <div className="course-rating">
-                                        <div className="star-rating-group">
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star-half-o"></i>
-                                        </div>
-                                        <span className="course-rating-count">4.50 (8)</span>
-                                    </div>
-                                    <div className="course-title">
-                                        <h3><a href="course-single.html">Ultimate Photoshop Training: From Beginner</a></h3>
-                                    </div>
-                                    <ul className="course-meta">
-                                        <li><i className="fa fa-clock-o"></i> 04h 39m</li>
-                                        <li><i className="fa fa-user"></i> 26</li>
-                                    </ul>
-                                    <div className="course-author">
-                                        <div className="avator">A</div> By <span className="author-name">Admin</span>
-                                    </div>
-                                    <div className="course-content-footer">
-                                        <div className="course-price four">
-                                            <span>$25.00</span>
-                                        </div>
-                                        <div className="course-cart">
-                                            <i className="fa fa-shopping-cart"></i>
-                                            <span><Link to={''} onClick={cartUpdate}>Add to cart</Link></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-4">
-                            <div className="course-card four">
-                                <div className="course-header">
-                                    <h5>All Levels</h5>
-                                    <div className="course-card-icon">
-                                        <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
-                                    </div>
-                                    <div className="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-10.jpg" className="img-fluid" alt="course10" /></a>
-                                    </div>
-                                </div>
-                                <div className="course-content four">
-                                    <div className="course-rating">
-                                        <div className="star-rating-group">
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                        </div>
-                                        <span className="course-rating-count">4.50 (7)</span>
-                                    </div>
-                                    <div className="course-title">
-                                        <h3><a href="course-single.html">Blender Creator : Learn 3D Modelling</a></h3>
-                                    </div>
-                                    <ul className="course-meta">
-                                        <li><i className="fa fa-clock-o"></i> 07h 12m</li>
-                                        <li><i className="fa fa-user"></i> 10</li>
-                                    </ul>
-                                    <div className="course-author">
-                                        <div className="avator">A</div> By <span className="author-name">Admin</span>
-                                    </div>
-                                    <div className="course-content-footer">
-                                        <div className="course-price four">
-                                            <span>$19.00</span>
-                                        </div>
-                                        <div className="course-cart">
-                                            <i className="fa fa-shopping-cart"></i>
-                                            <span><Link to={''} onClick={cartUpdate}>Add to cart</Link></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="col-lg-4">
-                            <div className="course-card four">
-                                <div className="course-header">
-                                    <h5>Intermediate</h5>
-                                    <div className="course-card-icon">
-                                        <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
-                                    </div>
-                                    <div className="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-11.jpg" className="img-fluid" alt="course11" /></a>
-                                    </div>
-                                </div>
-                                <div className="course-content four">
-                                    <div className="course-rating">
-                                        <div className="star-rating-group">
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star-half-o"></i>
-                                        </div>
-                                        <span className="course-rating-count">4.50 (5)</span>
-                                    </div>
-                                    <div className="course-title">
-                                        <h3><a href="course-single.html">Sales Training: Practical Sales Techniques</a></h3>
-                                    </div>
-                                    <ul className="course-meta">
-                                        <li><i className="fa fa-clock-o"></i> 03h 29m</li>
-                                        <li><i className="fa fa-user"></i> 29</li>
-                                    </ul>
-                                    <div className="course-author">
-                                        <div className="avator">A</div> By <span className="author-name">Admin</span>
-                                    </div>
-                                    <div className="course-content-footer">
-                                        <div className="course-price four">
-                                            <span>Free</span>
-                                        </div>
-                                        <div className="course-cart">
-                                            <span><Link to={''} onClick={cartUpdate}>Get Enrolled</Link></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="col-lg-4">
-                            <div className="course-card four">
-                                <div className="course-header">
-                                    <h5>Beginner</h5>
-                                    <div className="course-card-icon">
-                                        <img src="assets/images/icons/ribbon-1.svg" alt="ribbon1" />
-                                    </div>
-                                    <div className="course-thumbnail">
-                                        <a href="course-single.html"><img src="assets/images/course-8.jpg" className="img-fluid" alt="course8" /></a>
-                                    </div>
-                                </div>
-                                <div className="course-content four">
-                                    <div className="course-rating">
-                                        <div className="star-rating-group">
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                        </div>
-                                        <span className="course-rating-count">5.00 (8)</span>
-                                    </div>
-                                    <div className="course-title">
-                                        <h3><a href="course-single.html">Complete Trello - Beginners to Advanced</a></h3>
-                                    </div>
-                                    <ul className="course-meta">
-                                        <li><i className="fa fa-clock-o"></i> 04h 16m</li>
-                                        <li><i className="fa fa-user"></i> 12</li>
-                                    </ul>
-                                    <div className="course-author">
-                                        <div className="avator">A</div> By <span className="author-name">Admin</span>
-                                    </div>
-                                    <div className="course-content-footer">
-                                        <div className="course-price four">
-                                            <span>$26.00</span>
-                                        </div>
-                                        <div className="course-cart">
-                                            <i className="fa fa-shopping-cart"></i>
-                                            <span><Link to={''} onClick={cartUpdate}>Add to cart</Link></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                                )
+                            })
+                        }
                     </div>
+
                     <div className="row">
                         <div className="col-lg-12">
                             <ul className="course-pagination text-center">
