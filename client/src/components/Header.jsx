@@ -1,8 +1,40 @@
 import { Link } from "react-router-dom";
 import { useGlobContext } from "../context";
+import { useEffect, useState } from "react";
 
 const Header = () => {
     const {cartNum} = useGlobContext();
+    const [translation1, setTranslation1] = useState('');
+    const [translation2, setTranslation2] = useState('');
+
+    // setInterval(() => {
+    //     document.querySelector('.trans1').classList.toggle('translation1');
+    // }, 3000);
+    
+    // setInterval(() => {
+    //     document.querySelector('.trans2').classList.toggle('translation2');
+    // }, 3000);
+    
+    useEffect(() => {
+        setInterval(() => {
+            if (translation1 === 'translation1') {
+                setTranslation1('');
+            } else {
+                setTranslation1('translation1');
+            }
+        }, 3000);
+    }, [translation1]);
+
+    useEffect(() => {
+        setInterval(() => {
+            if (translation2 === 'translation2') {
+                setTranslation2('');
+            } else {
+                setTranslation2('translation2');
+            }
+        }, 3000);
+    }, [translation2]);
+
 
   return (
       <>
@@ -153,7 +185,7 @@ const Header = () => {
                       <ul>
                           <li>
                               <Link to={'/checkout'}><i className="fa fa-shopping-cart"></i>
-                                  <span className="cart-total-number" id="cartNnum">{cartNum}</span>
+                                  <span className="cart-total-number d-flex justify-content-center" id="cartNnum">{cartNum}</span>
                               </Link>
                           </li>
                       </ul>

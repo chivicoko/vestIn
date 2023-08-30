@@ -145,25 +145,6 @@ const Home = () => {
                             </div>
                         </div>
                         
-                        <div className="filter-level">
-                            <h4>Level</h4>
-                            <div className="form-check">
-                                <label className="form-check-label">
-                                    <input type="checkbox" className="form-check-input" value="" />Beginner
-                                </label>
-                            </div>
-                            <div className="form-check">
-                                <label className="form-check-label">
-                                    <input type="checkbox" className="form-check-input" value="" />Intermediate
-                                </label>
-                            </div>
-                            <div className="form-check">
-                                <label className="form-check-label">
-                                    <input type="checkbox" className="form-check-input" value="" />Expert
-                                </label>
-                            </div>
-                        </div>
-                        
                         <div className="filter-price">
                             <h4>Price</h4>
                             <div className="form-check">
@@ -232,6 +213,8 @@ const Home = () => {
                                                 </div>
                                                 <ul className="course-meta d-flex justify-content-between">
                                                     <li>{product.brand}</li>
+                                                    {/* <li>{product}</li> */}
+                                                    {/* <li>{'-'}</li> */}
                                                     <li>{product.category}</li>
                                                 </ul>
                                                 <div className="course-content-footer">
@@ -240,7 +223,7 @@ const Home = () => {
                                                     </div>
                                                     <div className="course-cart">
                                                         <i className="fa fa-shopping-cart"></i>
-                                                        <span><Link onClick={cartUpdate}>Add to cart</Link></span>
+                                                        <span><Link onClick={() => cartUpdate(product)}>Add to cart</Link></span>
                                                     </div>
                                                 </div>
                                             </div>
