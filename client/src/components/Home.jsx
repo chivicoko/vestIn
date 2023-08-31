@@ -35,20 +35,6 @@ const Home = () => {
   return (
         <>
 
-    {/* <section className="hero-area">
-        <div className="container">
-            <div className="caption-content text-center">
-                <h4>Start learning from home</h4>
-                <h2 className={`text ${blink}`}>Connect And Start Learning Today.</h2>
-                <p>We are providing high-quality online courses to improve your skill. Our all instructors are highly experienced and experts.</p>
-                <ul style={{marginTop: '150px'}}>
-                    <li><a href="about-us.html">Find courses</a></li>
-                    <li><a className="btn-bg" href="contact.html">Start free trial</a></li>
-                </ul>
-            </div>
-        </div>
-    </section> */}
-    
     <div id="carouselExampleControls" className="carousel slide hero-carousel" data-ride="carousel">
         <div className="carousel-inner">
           <div className="carousel-item active">
@@ -93,13 +79,6 @@ const Home = () => {
         </a>
         
         <div class="carousel-writeup">
-            {/* <div id="writeup" class="text-center caption-content">
-                <h2 class="text-white mt-5 ml-5">Welcome to School of Medical Laboratories, Our Lady of Lourdes Hospital Complex, Ihiala</h2>
-                <ul>
-                    <li><a href="about-us.html">Read More</a></li>
-                    <li><a class="btn-bg" href="contact.html">Get in touch</a></li>
-                </ul>
-            </div> */}
             <div className="caption-content text-center" id="writeup">
                 <h4>Start learning from home</h4>
                 <h2 style={{marginTop: '100px'}} className={`text ${blink}`}>Connect And Start Learning Today.</h2>
