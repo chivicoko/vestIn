@@ -35,7 +35,7 @@ const Orders = () => {
                         <div className="two row d-flex px-0 py-5">
                             {cartItems.map(item => {
                                 return (
-                                        <div key={item.id} className="col-4 border d-flex justify-content-around flex-column align-items-center py-3">
+                                        <div key={item.id} className="col-4 border d-flex justify-content-around flex-column align-items-center py-3 px-1">
                                             <div>
                                                 <div className="testi-client-im rounded">
                                                     <img src={item.thumbnail} className='rounded' alt="client2"  style={{width: '150px'}}/>

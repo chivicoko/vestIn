@@ -1,6 +1,9 @@
 // import { Link } from "react-router-dom";
 
+import { useGlobContext } from "../context";
+
 const Footer = () => {
+    const {products, naira} = useGlobContext();
 
   return (
     <>
@@ -37,36 +40,36 @@ const Footer = () => {
                       <div className="footer-widget footer-cat">
                           <h4>Categories</h4>
                           <ul>
-                              <li><a href="#"><i className="fa fa-angle-right"></i> Business</a></li>
-                              <li><a href="#"><i className="fa fa-angle-right"></i> Design</a></li>
-                              <li><a href="#"><i className="fa fa-angle-right"></i> Development</a></li>
-                              <li><a href="#"><i className="fa fa-angle-right"></i> Marketing</a></li>
-                              <li><a href="#"><i className="fa fa-angle-right"></i> Photography</a></li>
+                              <li><a href="#"><i className="fa fa-angle-right"></i> Home</a></li>
+                              <li><a href="#"><i className="fa fa-angle-right"></i> My GitHub</a></li>
+                              <li><a href="#"><i className="fa fa-angle-right"></i> My Portfolio</a></li>
+                              <li><a href="#"><i className="fa fa-angle-right"></i> Checkout</a></li>
+                              <li><a href="#"><i className="fa fa-angle-right"></i> victorokoye.com</a></li>
                           </ul>
                       </div>
                   </div>
                   
                   <div className="col-lg-4 col-md-6">
                       <div className="footer-widget recent-post">
-                          <h4> Recent Posts</h4>
+                          <h4> Good Specs</h4>
 
                           <div className="footer-post-single">
                               <div className="recent-post-thumb">
-                                  <img src="assets/images/blog-sm-5.jpg" alt="image" className="img-fluid" />
+                                  <img src="assets/images/blog-sm-5-.jpg" alt="image" className="img-fluid" style={{height: '120px', width: '100px'}} />
                               </div>
                               <div className="recent-post-cont">
-                                  <h6><a href="#">Learn Webs Applications Development from Experts</a></h6>
-                                  <span>April 1, 2022</span>
+                                  <h6><a href="#">A good product lasts as long as possible</a></h6>
+                                  <span>Victor___</span>
                               </div>
                           </div>
                           
                           <div className="footer-post-single m-0">
                               <div className="recent-post-thumb">
-                                  <img src="assets/images/blog-sm-4.jpg" alt="image" className="img-fluid" />
+                                  <img src="assets/images/blog-sm-4.jpg" alt="image" className="img-fluid" style={{height: '120px', width: '100px'}} />
                               </div>
                               <div className="recent-post-cont">
-                                  <h6><a href="#">Expand Your Career Opportunities With Python</a></h6>
-                                  <span>May 25, 2022</span>
+                                  <h6><a href="#">When we sell, we sell with all our capabilities and all honor</a></h6>
+                                  <span>Okoye___</span>
                               </div>
                           </div>
 
@@ -79,15 +82,15 @@ const Footer = () => {
                           <ul>
                               <li>
                                   <i className="fa fa-map-marker"></i>
-                                  <p className="m-0">250/A Oval Street, Mount View, London, United Kingdom</p>
+                                  <p className="m-0">7 Pat-Clara street, Ifite-Awka, Anambra State, Nigeria</p>
                               </li>
                               <li>
                                   <i className="fa fa-envelope" aria-hidden="true"></i>
-                                  <p className="m-0">support@example.com</p>
+                                  <p className="m-0">victor.c.okoye@gmail.com</p>
                               </li>
                               <li>
                                   <i className="fa fa-phone" aria-hidden="true"></i>
-                                  <p className="m-0">+98 12345 67890</p>
+                                  <p className="m-0">+234 802 884 5693</p>
                               </li>
                               <li className="p-0 info">Feel free to contact us
                               </li>
