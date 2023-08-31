@@ -64,9 +64,9 @@ const Checkout = () => {
                     }
                 </div>
 
-                <div className="col-md-4 pr-0">
-                    <div className="choose-single three pr-0">
-                        <div className="why-choose-cont three">
+                <div className="col-md-4">
+                    <div className="choose-single three">
+                        <div className="why-choose-cont three text-center">
                             <h3 className="text-left">Order Summary</h3>
                             <p className="d-flex justify-content-between"><span>Items ({cartItems.length})</span><span>{naira.format(totalPrice)}</span></p>
                             <p className="d-flex justify-content-between"><span>Shipping and handling</span><span style={{borderBottom: '1px solid gray'}}>{naira.format(0)}</span></p>
@@ -76,7 +76,7 @@ const Checkout = () => {
                             <h5 className="d-flex justify-content-between"><span>Order total:</span><span>{naira.format(totalPrice)}</span></h5>
                             <hr/>
                             <div className="text-left mb-4">Use Paypal <input type="checkbox" name="" id="" /></div>
-                            <Link to={'/orders'} className="btn btn-success mb-2" style={{padding: '10px 109px', fontSize: '16px'}}>Place your order</Link>
+                            <Link to={'/orders'} className="btn btn-success mb-2" style={{padding: '10px 92px', fontSize: '16px'}}>Place your order</Link>
                         </div>
                     </div>
                 </div>

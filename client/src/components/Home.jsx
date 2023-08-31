@@ -84,8 +84,8 @@ const Home = () => {
                 <h2 style={{marginTop: '100px'}} className={`text ${blink}`}>Connect And Have Your Needs Met.</h2>
                 <p className="px-2">We provide high-quality products all over Nigeria, and deliver them promptly. Our customer services are very friendly and attentive to our customers.</p>
                 <ul style={{marginTop: '150px'}}>
-                    <li><a href="about-us.html">Find courses</a></li>
-                    <li><a className="btn-bg" href="contact.html">Start free trial</a></li>
+                    <li><a href="">Find courses</a></li>
+                    <li><a className="btn-bg" href="">Start free trial</a></li>
                 </ul>
             </div>
         </div>
