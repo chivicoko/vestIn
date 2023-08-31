@@ -80,8 +80,8 @@ const Home = () => {
         
         <div class="carousel-writeup">
             <div className="caption-content text-center" id="writeup">
-                <h4>Start learning from home</h4>
-                <h2 style={{marginTop: '100px'}} className={`text ${blink}`}>Connect And Start Learning Today.</h2>
+                <h4>Meet your needs from anywhere</h4>
+                <h2 style={{marginTop: '100px'}} className={`text ${blink}`}>Connect And Have Your Needs Met.</h2>
                 <p className="px-2">We provide high-quality products all over Nigeria, and deliver them promptly. Our customer services are very friendly and attentive to our customers.</p>
                 <ul style={{marginTop: '150px'}}>
                     <li><a href="about-us.html">Find courses</a></li>

@@ -99,7 +99,7 @@ const Header = () => {
               <div className="header-top-wrap">
 
                   <div className="header-course-search">
-                      <input type="text" placeholder="Search Courses" className="form-control" />
+                      <input type="text" placeholder="Search Products..." className="form-control" />
                       <span><i className="fa fa-search"></i></span>
                   </div>
 
@@ -142,7 +142,7 @@ const Header = () => {
                   <div className="main-menu-area text-right">
                       <nav className="mainmenu">
                         <div className="header2-course-search">
-                            <input type="text" placeholder="Search Courses, Brands and Categories" className="form-control" />
+                            <input type="text" placeholder="Search Products..." className="form-control" />
                             <span><i className="fa fa-search"></i></span>
                         </div>
                       </nav>

@@ -838,6 +838,7 @@ p {
 .carousel-item {
     justify-content: center;
     align-items: center;
+    height: 100%;
   }
 
 .carousel-item img {
@@ -848,7 +849,7 @@ p {
   }
 
 #carouselExampleControls, .carousel-inner {
-    height: 80vh;
+    height: 85vh;
 }
 
 .carousel-writeup {
@@ -4676,16 +4677,16 @@ p {
 }
 
 .blink1{
-    animation: typewriter 8s steps(34) 1s 1 both,
-               blinkCursor 500ms steps(34) infinite;
-    -webkit-animation: typewriter 8s steps(34) 1s 1 both,
-               blinkCursor 500ms steps(34) infinite;
-    -moz-animation: typewriter 8s steps(34) 1s 1 both,
-               blinkCursor 500ms steps(34) infinite;
-    -ms-animation: typewriter 8s steps(34) 1s 1 both,
-               blinkCursor 500ms steps(34) infinite;
-    -o-animation: typewriter 8s steps(34) 1s 1 both,
-               blinkCursor 500ms steps(34) infinite;
+    animation: typewriter 8s steps(30) 1s 1 both,
+               blinkCursor 500ms steps(30) infinite;
+    -webkit-animation: typewriter 8s steps(30) 1s 1 both,
+               blinkCursor 500ms steps(30) infinite;
+    -moz-animation: typewriter 8s steps(30) 1s 1 both,
+               blinkCursor 500ms steps(30) infinite;
+    -ms-animation: typewriter 8s steps(30) 1s 1 both,
+               blinkCursor 500ms steps(30) infinite;
+    -o-animation: typewriter 8s steps(30) 1s 1 both,
+               blinkCursor 500ms steps(30) infinite;
   }
 
   @keyframes typewriter {
