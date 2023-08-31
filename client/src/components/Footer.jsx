@@ -20,7 +20,7 @@ const Footer = () => {
                                 </h3>
                             </a>
                           <div className="footer-about-description">
-                              <p>We are providing high-quality online courses for about ten years. Our all instructors expert and highly experienced.</p>
+                              <p>We provide high-quality products all over Nigeria, and deliver them promptly. Our customer services are very friendly and attentive to our customers.</p>
                           </div>
                           <h6>Follow Us</h6>
                           <ul className="footer-social-icons">

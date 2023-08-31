@@ -35,13 +35,14 @@ const Orders = () => {
                         <div className="two row d-flex px-0 py-5">
                             {cartItems.map(item => {
                                 return (
-                                        <div key={item.id} className="col-4 border d-flex justify-content-center align-items-center">
+                                        <div key={item.id} className="col-4 border d-flex justify-content-around flex-column align-items-center py-3">
                                             <div>
                                                 <div className="testi-client-im rounded">
                                                     <img src={item.thumbnail} className='rounded' alt="client2"  style={{width: '150px'}}/>
                                                 </div>
                                                 <h5>{item.title} ({item.quantity} pieces) - {naira.format(item.price*item.quantity)} </h5>
                                             </div>
+                                            {/* <div className=""><Link to={''}>Buy it again</Link></div> */}
                                         </div>
                                     )
                             })}
@@ -49,7 +50,6 @@ const Orders = () => {
 
                         <div className="row justify-content-between ml-5 text-justify">
                             <p style={{color: '#ff630e'}}>Arriving on: August 28</p>
-                            <div className=""><Link to={''}>Buy it again</Link></div>
                             <Link to={'/tracking'} className="btn btn-success" style={{padding: '10px 70px', fontSize: '16px'}}>Track package</Link>
                         </div>
                     </div>

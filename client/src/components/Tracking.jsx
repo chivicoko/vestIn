@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useGlobContext } from '../context';
 
 const Tracking = () => {
-    const {cartItems, naira, totalPrice} = useGlobContext();
+    const {cartItems, naira} = useGlobContext();
     
   return (
         <>
@@ -34,7 +34,7 @@ const Tracking = () => {
                         <div className="two row d-flex px-0 py-5">
                             {cartItems.map(item => {
                                 return (
-                                        <div key={item.id} className="col-4 border d-flex justify-content-center align-items-center">
+                                        <div key={item.id} className="col-4 border d-flex justify-content-center align-items-center" style={{height: '200px'}}>
                                             <div>
                                                 <div className="testi-client-im rounded">
                                                     <img src={item.thumbnail} className='rounded' alt="client2"  style={{width: '150px'}}/>
