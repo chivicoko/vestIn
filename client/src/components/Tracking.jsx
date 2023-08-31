@@ -31,10 +31,10 @@ const Tracking = () => {
                             </div>
                             </h5>
                         </div>
-                        <div className="two row d-flex px-0 py-5">
+                        <div className="two row px-0 py-5">
                             {cartItems.map(item => {
                                 return (
-                                        <div key={item.id} className="col-4 border d-flex justify-content-center align-items-center" style={{height: '200px'}}>
+                                        <div key={item.id} className=" col-lg-4 col-md-4 col-sm-12 border d-flex justify-content-center align-items-center py-3 px-1">
                                             <div>
                                                 <div className="testi-client-im rounded">
                                                     <img src={item.thumbnail} className='rounded' alt="client2"  style={{width: '150px'}}/>
@@ -46,9 +46,8 @@ const Tracking = () => {
                             })}
                         </div>
 
-                        <div className="row justify-content-between ml-5 text-justify">
+                        <div className="row justify-content-round">
                             <p style={{color: '#ff630e'}}>Arriving on: August 28</p>
-                            {/* <div className=""><Link to={''}>Buy it again</Link></div> */}
                             <Link to={'/orders'} className="btn btn-dark mb-2" style={{padding: '10px 70px', fontSize: '16px'}}>View all orders</Link>
                         </div>
                     </div>

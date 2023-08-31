@@ -25,17 +25,24 @@ const Orders = () => {
                 <div className="col-12">
 
                     <div className="choose-single three mb-3 px-5">
-                        <div className="delivery-date text-left">
-                            <h5 className="d-flex justify-content-between p-3 bg-gray">
-                                <span><strong>Order Placed:</strong> August 13</span>
-                                <span className="text-success"><strong>Total:</strong> {naira.format(totalPrice)}</span>
-                                <span className="text-success"><strong>Order ID:</strong> $ 304urf-w9r834-453-4f-4tfd-ffv9700847</span>
+                        <div className="delivery-date row p-3 bg-gray">
+                            <h5 className='col-lg-4 col-md-4 col-sm-12 d-flex justify-content-lg-center justify-content-md-center  justify-content-between'>
+                                <span><strong>Order Placed:</strong></span> &nbsp;
+                                <span> August 13</span>
+                            </h5>
+                            <h5 className='col-lg-4 col-md-4 col-sm-12 d-flex justify-content-lg-center justify-content-md-center  justify-content-between'>
+                                <span className="text-success"><strong>Total: </strong></span> &nbsp;
+                                <span className="text-success"> {naira.format(totalPrice)}</span>
+                            </h5>
+                            <h5 className='col-lg-4 col-md-4 col-sm-12 d-flex justify-content-lg-center justify-content-md-center justify-content-between'>
+                                <span className="text-success"><strong>Order ID: </strong></span> &nbsp;
+                                <span className="text-success"> $304urf-w9r834</span>
                             </h5>
                         </div>
-                        <div className="two row d-flex px-0 py-5">
+                        <div className="two row px-0 py-5">
                             {cartItems.map(item => {
                                 return (
-                                        <div key={item.id} className="col-4 border d-flex justify-content-around flex-column align-items-center py-3 px-1">
+                                        <div key={item.id} className="order-items col-lg-4 col-md-4 col-sm-12 border d-flex justify-content-around flex-column align-items-center py-3 px-1">
                                             <div>
                                                 <div className="testi-client-im rounded">
                                                     <img src={item.thumbnail} className='rounded' alt="client2"  style={{width: '150px'}}/>
@@ -48,7 +55,7 @@ const Orders = () => {
                             })}
                         </div>
 
-                        <div className="row justify-content-between ml-5 text-justify">
+                        <div className="row justify-content-around">
                             <p style={{color: '#ff630e'}}>Arriving on: August 28</p>
                             <Link to={'/tracking'} className="btn btn-success" style={{padding: '10px 70px', fontSize: '16px'}}>Track package</Link>
                         </div>
@@ -56,7 +63,7 @@ const Orders = () => {
                 </div>
             </div>
 
-            <div className="col-4 p-0 mt-4 text-justify">
+            <div className="text-center p-0 mt-5">
                 <Link to={'/checkout'} className="btn btn-dark mb-2" style={{padding: '10px 70px', fontSize: '16px'}}>Back to Checkout</Link>
             </div>
         </div>

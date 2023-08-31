@@ -55,7 +55,7 @@ const Footer = () => {
 
                           <div className="footer-post-single">
                               <div className="recent-post-thumb">
-                                  <img src="assets/images/blog-sm-5-.jpg" alt="image" className="img-fluid" style={{height: '120px', width: '100px'}} />
+                                  <img src="assets/images/blog-sm-5.jpg" alt="image" className="img-fluid" style={{height: '120px', width: '100px'}} />
                               </div>
                               <div className="recent-post-cont">
                                   <h6><a href="#">A good product lasts as long as possible</a></h6>
