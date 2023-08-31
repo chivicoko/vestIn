@@ -1,7 +1,10 @@
 
 import { Link } from 'react-router-dom';
+import { useGlobContext } from '../context';
 
 const Orders = () => {
+    const {cartItems, naira, totalPrice} = useGlobContext();
+
     
   return (
         <>
@@ -12,41 +15,42 @@ const Orders = () => {
 
                 <div className="col-lg-8 offset-lg-2">
                     <div className="sec-heading  text-center">
-                        <h4>Checkout (9 items)</h4>
+                        <h4>Checkout ({cartItems.length} items)</h4>
                         <h2>Review Your Order</h2>
                     </div>
                 </div>
 
             </div>
             <div className="row text-center">
-
                 <div className="col-12">
 
-                    <div className="choose-single three mb-3">
-
+                    <div className="choose-single three mb-3 px-5">
                         <div className="delivery-date text-left">
                             <h5 className="d-flex justify-content-between p-3 bg-gray">
                                 <span><strong>Order Placed:</strong> August 13</span>
-                                <span className="text-success"><strong>Total:</strong> $ 45.30</span>
+                                <span className="text-success"><strong>Total:</strong> {naira.format(totalPrice)}</span>
                                 <span className="text-success"><strong>Order ID:</strong> $ 304urf-w9r834-453-4f-4tfd-ffv9700847</span>
                             </h5>
                         </div>
-                        <div className="two d-flex px-0">
-                            <div className="col-7 testi-client-info">
-                                <div className="testi-client-img">
-                                    <img src="assets/images/client-2.jpg" alt="client2" />
-                                </div>
-                                <div className="testi-client-details text-left">
-                                    <h5>6-Piece Nonstick, Carbon Steel Oven Bakeware Baking Set</h5>
-                                    <p style={{color: '#ff630e'}}>Arriving on: August 28</p>
-                                    <h6>Quantity: 5</h6>
-                                    <div className="d-flex justify-content-between pr-5"><Link to={''}>Buy it again</Link></div>
-                                </div>
-                            </div>
-                            
-                            <div className="col-4 ml-5 text-justify">
-                                <Link to={'/tracking'} className="btn btn-success mb-2 mt-5 ml-5" style={{padding: '10px 70px', fontSize: '16px'}}>Track package</Link>
-                            </div>
+                        <div className="two row d-flex px-0 py-5">
+                            {cartItems.map(item => {
+                                return (
+                                        <div key={item.id} className="col-4 border d-flex justify-content-center align-items-center">
+                                            <div>
+                                                <div className="testi-client-im rounded">
+                                                    <img src={item.thumbnail} className='rounded' alt="client2"  style={{width: '150px'}}/>
+                                                </div>
+                                                <h5>{item.title} ({item.quantity} pieces) - {naira.format(item.price*item.quantity)} </h5>
+                                            </div>
+                                        </div>
+                                    )
+                            })}
+                        </div>
+
+                        <div className="row justify-content-between ml-5 text-justify">
+                            <p style={{color: '#ff630e'}}>Arriving on: August 28</p>
+                            <div className=""><Link to={''}>Buy it again</Link></div>
+                            <Link to={'/tracking'} className="btn btn-success" style={{padding: '10px 70px', fontSize: '16px'}}>Track package</Link>
                         </div>
                     </div>
                 </div>

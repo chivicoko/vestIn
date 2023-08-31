@@ -63,8 +63,8 @@ const Header = () => {
                     <li><Link to={''}> <i className="fa fa-arrow-right"></i> Order Cancelation</Link></li>
                     <li><Link to={''}> <i className="fa fa-arrow-right"></i> Returns and Refunds</Link></li>
                     <hr />
-                    <li><Link to={''}><i className="fa fa-shopping-bag"></i> Orders</Link></li>
-                    <li><Link to={''}><i className="fa fa-heart"></i> Saved Items</Link></li>                                    
+                    <li><Link to={'/orders'}><i className="fa fa-shopping-bag"></i> Orders</Link></li>
+                    <li><Link to={'/checkout'}><i className="fa fa-heart"></i> Saved Items</Link></li>                                    
                     <li><Link to={''}><i className="fa fa-sign-in"></i> Sign In</Link></li>
                     <li><Link to={''}><i className="fa fa-user-o"></i> Register</Link></li>
                     <hr />
@@ -154,8 +154,8 @@ const Header = () => {
                             <li>
                                 <Link to={''} className="active"><i className="fa fa-user-circle-o"></i> &nbsp; Account &nbsp; <i className="fa fa-angle-down"></i></Link>
                                 <ul className="sub-menu">
-                                    <li><Link to={''}><i className="fa fa-shopping-bag"></i> Orders</Link></li>
-                                    <li><Link to={''}><i className="fa fa-heart"></i> Saved Items</Link></li>
+                                    <li><Link to={'/orders'}><i className="fa fa-shopping-bag"></i> Orders</Link></li>
+                                    <li><Link to={'/checkout'}><i className="fa fa-heart"></i> Saved Items</Link></li>
                                     <br />
                                     <br />
                                     <li></li>

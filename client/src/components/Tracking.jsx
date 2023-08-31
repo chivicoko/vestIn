@@ -1,7 +1,9 @@
 
 import { Link } from 'react-router-dom';
+import { useGlobContext } from '../context';
 
 const Tracking = () => {
+    const {cartItems, naira, totalPrice} = useGlobContext();
     
   return (
         <>
@@ -19,9 +21,9 @@ const Tracking = () => {
 
             <div className="row text-center">
                 <div className="col-12">
-                    <div className="choose-single three mb-3">
+                    <div className="choose-single three mb-3 px-5">
                         <div className="delivery-date text-left">
-                            <h5 className=" p-3 bg-gray">
+                            <h5 className="p-3  bg-gray">
                             <div className="progress" style={{height: '30px'}}>
                                 <div className="progress-bar" role="progressbar" style={{width: '33%'}} aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">Preparing</div>
                                 <div className="progress-bar bg-white text-dark" role="progressbar" style={{width: '34%'}} aria-valuenow="34" aria-valuemin="0" aria-valuemax="100">Shipped</div>
@@ -29,27 +31,29 @@ const Tracking = () => {
                             </div>
                             </h5>
                         </div>
+                        <div className="two row d-flex px-0 py-5">
+                            {cartItems.map(item => {
+                                return (
+                                        <div key={item.id} className="col-4 border d-flex justify-content-center align-items-center">
+                                            <div>
+                                                <div className="testi-client-im rounded">
+                                                    <img src={item.thumbnail} className='rounded' alt="client2"  style={{width: '150px'}}/>
+                                                </div>
+                                                <h5>{item.title} ({item.quantity} pieces) - {naira.format(item.price*item.quantity)} </h5>
+                                            </div>
+                                        </div>
+                                    )
+                            })}
+                        </div>
 
-                        <div className="two d-flex px-0">
-                            <div className="col-5">
-                                <div className="testi-client-im">
-                                    <img src="assets/images/client-2.jpg" alt="client2" />
-                                </div>
-                            </div>
-                            <div className="col-7 testi-client-info pt-5">
-                                <div className="testi-client-details text-left">
-                                    <h5>6-Piece Nonstick, Carbon Steel Oven Bakeware Baking Set</h5>
-                                    <p style={{color: '#ff630e'}}>Arriving on August 28</p>
-                                    <h6>Quantity: 5</h6>
-                                </div>
-                            </div>
+                        <div className="row justify-content-between ml-5 text-justify">
+                            <p style={{color: '#ff630e'}}>Arriving on: August 28</p>
+                            {/* <div className=""><Link to={''}>Buy it again</Link></div> */}
+                            <Link to={'/orders'} className="btn btn-dark mb-2" style={{padding: '10px 70px', fontSize: '16px'}}>View all orders</Link>
                         </div>
                     </div>
                 </div>
                 
-                <div className="col-4 mt-4 text-justify">
-                    <Link to={'/orders'} className="btn btn-dark mb-2" style={{padding: '10px 70px', fontSize: '16px'}}>View all orders</Link>
-                </div>
             </div>
         </div>
     </section>
