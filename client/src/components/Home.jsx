@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const Home = () => {
     const [blink, setBlink] = useState('blink1');
-    const {cartUpdate, products} = useGlobContext();
+    const {cartUpdate, products, naira} = useGlobContext();
     // console.log(products);
     
     // // date - days of the week ------------
@@ -219,7 +219,7 @@ const Home = () => {
                                                 </ul>
                                                 <div className="course-content-footer">
                                                     <div className="course-price four">
-                                                        <span>$ {product.price}.00</span>
+                                                        <span>{naira.format(product.price)}</span>
                                                     </div>
                                                     <div className="course-cart">
                                                         <i className="fa fa-shopping-cart"></i>

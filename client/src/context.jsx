@@ -19,6 +19,13 @@ const AppProvider = ({children}) => {
         }
     }
 
+    let totalPrice = cartItems.reduce((accumulator, item) => accumulator + (item.price * item.quantity), 0);
+    let naira = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'NGN',
+    });
+    // let totalPriceInNairaFormat = naira.format(totalPrice);
+
     useEffect(() => {
         fetchProducts(productsUrl);
     }, []);
@@ -32,17 +39,14 @@ const AppProvider = ({children}) => {
             setCartItems([...cartItems, {...product, quantity: 1}]);
             setCartNum((prevCounter) => prevCounter + 1);
         }
-
-        // setCartItems([...cartItems, product]);
     }
-    // console.log(cartItems[8].quantity);
 
     useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(cartNum));
         localStorage.setItem("items", JSON.stringify(cartItems));
       }, [cartNum, cartItems]);
 
-    return <AppContext.Provider value={{cartNum, cartUpdate, products, cartItems}}>
+    return <AppContext.Provider value={{cartNum, cartUpdate, products, cartItems, naira, totalPrice}}>
         {children}
     </AppContext.Provider>
 }
