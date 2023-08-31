@@ -35,7 +35,7 @@ const Home = () => {
   return (
         <>
 
-    <section className="hero-area">
+    {/* <section className="hero-area">
         <div className="container">
             <div className="caption-content text-center">
                 <h4>Start learning from home</h4>
@@ -47,7 +47,70 @@ const Home = () => {
                 </ul>
             </div>
         </div>
-    </section>
+    </section> */}
+    
+    <div id="carouselExampleControls" className="carousel slide hero-carousel" data-ride="carousel">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img className="d-block w-100 img-fluid" src="assets/images/banner-9.jpg" alt="First slide" />
+          </div>
+          <div className="carousel-item">
+            <img className="d-block w-100 img-fluid" src="assets/images/banner-8.jpg" alt="Second slide" />
+          </div>
+          <div className="carousel-item">
+            <img className="d-block w-100 img-fluid" src="assets/images/banner-4.jpg" alt="Third slide" />
+          </div>
+          <div className="carousel-item">
+            <img className="d-block w-100 img-fluid" src="assets/images/banner-5.jpg" alt="Fourth slide" />
+          </div>
+          <div className="carousel-item">
+            <img className="d-block w-100 img-fluid" src="assets/images/banner-6.jpg" alt="Fifth slide" />
+          </div>
+          <div className="carousel-item">
+            <img className="d-block w-100 img-fluid" src="assets/images/banner-1.jpg" alt="Sixth slide" />
+          </div>
+          <div className="carousel-item">
+            <img className="d-block w-100 img-fluid" src="assets/images/banner-2.jpg" alt="Fifth slide" />
+          </div>
+          <div className="carousel-item">
+            <img className="d-block w-100 img-fluid" src="assets/images/banner-7.jpg" alt="Sixth slide" />
+          </div>
+          <div className="carousel-item">
+            <img className="d-block w-100 img-fluid" src="assets/images/banner-3.jpg" alt="Fifth slide" />
+          </div>
+          <div className="carousel-item">
+            <img className="d-block w-100 img-fluid" src="assets/images/banner-10.jpg" alt="Sixth slide" />
+          </div>
+        </div>
+
+        <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="sr-only">Previous</span>
+        </a>
+        <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="sr-only">Next</span>
+        </a>
+        
+        <div class="carousel-writeup">
+            {/* <div id="writeup" class="text-center caption-content">
+                <h2 class="text-white mt-5 ml-5">Welcome to School of Medical Laboratories, Our Lady of Lourdes Hospital Complex, Ihiala</h2>
+                <ul>
+                    <li><a href="about-us.html">Read More</a></li>
+                    <li><a class="btn-bg" href="contact.html">Get in touch</a></li>
+                </ul>
+            </div> */}
+            <div className="caption-content text-center" id="writeup">
+                <h4>Start learning from home</h4>
+                <h2 style={{marginTop: '100px'}} className={`text ${blink}`}>Connect And Start Learning Today.</h2>
+                <p className="px-2">We provide high-quality products all over Nigeria, and deliver them promptly. Our customer services are very friendly and attentive to our customers.</p>
+                <ul style={{marginTop: '150px'}}>
+                    <li><a href="about-us.html">Find courses</a></li>
+                    <li><a className="btn-bg" href="contact.html">Start free trial</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     {/* ecommerce */}
     <section className="course-archive mb-5">

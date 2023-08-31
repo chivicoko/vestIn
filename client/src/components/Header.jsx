@@ -68,8 +68,8 @@ const Header = () => {
                     <li><Link to={''}><i className="fa fa-sign-in"></i> Sign In</Link></li>
                     <li><Link to={''}><i className="fa fa-user-o"></i> Register</Link></li>
                     <hr />
-                    <li><i className="fa fa-envelope"></i> support@vestin.com</li>
-                    <li><i className="fa fa-phone"></i> +234 012345 6789</li>
+                    <li><i className="fa fa-envelope"></i> victor.c.okoye@gmail.com</li>
+                    <li><i className="fa fa-phone"></i> +234 802 884 5693</li>
                     <li><Link to={''}><i className="fa fa-comments"></i> &nbsp; Live Chat</Link></li>
                 </ul>
               </div>
@@ -120,10 +120,10 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div className="header-contact-info text-left pl-5">
+                  <div className="header-contact-info text-left pl-3">
                       <ul>
-                          <li className="pr-3"><i className="fa fa-envelope mr-1"></i> support@vestin.com</li>
-                          <li className="pr-3"><i className="fa fa-phone mr-1"></i> +234 012345 6789</li>
+                          <li className="pr-3"><i className="fa fa-envelope mr-1"></i> victor.c.okoye@gmail.com</li>
+                          <li className="pr-3"><i className="fa fa-phone mr-1"></i> +234 802 884 5693</li>
                       </ul>
                   </div>
 
