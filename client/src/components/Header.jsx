@@ -136,7 +136,7 @@ const Header = () => {
               <div className="main-menu-wrap">
 
                   <div className="site-logo">
-                      <Link to={'/'} className="logo"><h3><i className="fa fa-gg-circle"></i>vestIn</h3></Link>
+                      <Link to={'/vestIn'} className="logo"><h3><i className="fa fa-gg-circle"></i>vestIn</h3></Link>
                   </div>
                   
                   <div className="main-menu-area text-right">
